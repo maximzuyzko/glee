@@ -1,0 +1,39 @@
+body {
+  font-size: 16px;
+  line-height: 1.9;
+  background-color: #FFFFFF;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+  &--big {
+    max-width: 1800px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+button,
+a,
+textarea,
+input {
+  outline: transparent;
+  &:focus {
+    border: 1px solid $title-color;
+    border-radius: 25% / 40%;
+  }
+}
+
