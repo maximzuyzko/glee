@@ -1,5 +1,16 @@
 $title-color: #243f4d;
 $header-color: #436372;
+$bg-color: #fcd7b6;
+$btn-color: #a3bbc8;
+$footer-color: #7b7b7b;
+
+%hover-link {
+  transition: color 0.5s;
+
+  &:hover {
+    color: $btn-color;
+  }
+}
 
 %poppins-700 {
   font-family: 'Poppins-Bold', 'Tahoma', sans-serif;

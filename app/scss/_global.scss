@@ -33,7 +33,6 @@ input {
   outline: transparent;
   &:focus {
     border: 1px solid $title-color;
-    border-radius: 25% / 40%;
   }
 }
 
