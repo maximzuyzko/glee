@@ -1,0 +1,15 @@
+@mixin line-clamp($property) {
+  -webkit-line-clamp: $property;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin  hover-link {
+  transition: color 0.5s;
+
+  &:hover {
+    color: $blue300;
+  }
+}
+

@@ -1,9 +1,10 @@
 $(function () {
-    $('.hero__items').slick({
+    $('.hero-slider__items').slick({
         dots: true,
         arrows: false,
-        fade: true,
         autoplay: true,
         autoplaySpeed: 5000,
     })
+
+    var mixer = mixitup('.products-week__items');
 })

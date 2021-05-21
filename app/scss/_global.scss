@@ -1,7 +1,17 @@
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
-  line-height: 1.9;
-  background-color: #FFFFFF;
+  line-height: 1.5;
+  background-color: $white;
+  color: $blue500;
+  font-family: $DMSans;
+  font-weight: $fw400;
 }
 
 .container {
@@ -31,8 +41,17 @@ a,
 textarea,
 input {
   outline: transparent;
+
+  /*&:visited {
+    color: $blue-dark;
+  }*/
+
   &:focus {
-    border: 1px solid $title-color;
+    border: 1px solid $blue300;
+  }
+
+  &:active {
+    border: 1px solid $blue500;
   }
 }
 

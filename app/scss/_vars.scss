@@ -1,43 +1,15 @@
-$title-color: #243f4d;
-$header-color: #436372;
-$bg-color: #fcd7b6;
-$btn-color: #a3bbc8;
-$footer-color: #7b7b7b;
+//colors
+$blue-dark: #243f4d;
+$blue500: #436372;
+$peach: #fcd7b6;
+$blue300: #a3bbc8;
+$grey: #7b7b7b;
+$white: #ffffff;
 
-%hover-link {
-  transition: color 0.5s;
-
-  &:hover {
-    color: $btn-color;
-  }
-}
-
-%poppins-700 {
-  font-family: 'Poppins-Bold', 'Tahoma', sans-serif;
-  font-weight: 700;
-}
-
-%dmsans-700 {
-  font-family: 'DMSans-Bold', 'Tahoma', sans-serif;
-  font-weight: 700;
-}
-
-%dmsans-500 {
-  font-family: 'DMSans-Medium', 'Tahoma', sans-serif;
-  font-weight: 500;
-}
-
-%dmsans-400 {
-  font-family: 'DMSans-Regular', 'Tahoma', sans-serif;
-  font-weight: 400;
-}
-
-%rubik-500 {
-  font-family: 'Rubik-Medium', 'Tahoma', sans-serif;
-  font-weight: 500;
-}
-
-%rubik-400 {
-  font-family: 'Rubik-Regular', 'Tahoma', sans-serif;
-  font-weight: 400;
-}
+//fonts
+$Poppins: 'Poppins', 'Tahoma', sans-serif;
+$DMSans: 'DMSans', 'Tahoma', sans-serif;
+$Rubik: 'Rubik', 'Tahoma', sans-serif;
+$fw400: 400;
+$fw500: 500;
+$fw700: 700;

@@ -1,0 +1,57 @@
+.advantages {
+
+  &__items {
+    display: flex;
+    margin-bottom: 75px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba($peach, 0.2);
+    width: 100%;
+    padding: 48px 0;
+
+    &:not(:last-child) {
+      border-right: 1px solid rgba($blue-dark, 0.1);
+    }
+  }
+
+  &__info {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 80px;
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    &--support {
+      background-image: url("../images/icons/support-icon.svg");
+    }
+
+    &--delivery {
+      background-image: url("../images/icons/delivery-truck.svg");
+    }
+
+    &--credit {
+      background-image: url("../images/icons/credit-card.svg");
+    }
+  }
+
+  &__title {
+    @include line-clamp(1);
+
+    font-weight: $fw700;
+    font-size: 18px;
+    color: #414141;
+    background-position: top left;
+    background-repeat: no-repeat;
+  }
+
+  &__descr {
+    @include line-clamp(2);
+
+    color: #585858;
+  }
+}

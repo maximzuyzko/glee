@@ -1,0 +1,156 @@
+.header {
+  flex: 1 0 auto;
+
+  &__inner {
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  transition: transform 0.5s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.menu {
+  padding-left: 180px;
+  display: flex;
+
+  &__list {
+    &:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+
+  &__link {
+    font-family: $Rubik;
+    font-weight: $fw500;
+    font-size: 15px;
+    line-height: 1;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.5s ease, color 0.5s ease;
+
+    &:hover {
+      border-bottom-color: $blue-dark;
+      color: $blue-dark;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: transparent;
+    background-color: $blue300;
+    width: 51px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+
+    &--search svg,
+    &--menu svg {
+      fill: $white;
+      transition: fill 0.5s;
+    }
+
+
+    &--search svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    &--menu svg {
+      width: 21px;
+      height: 21px;
+    }
+
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+
+    &:hover {
+      background-color: rgba($blue300, 0.2);
+      svg {
+        fill: $blue-dark;
+      }
+    }
+  }
+
+  &__items {
+    margin-right: 20px;
+    width: 179px;
+    height: 52px;
+    background-color: $peach;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 32px;
+      background-color: rgba($white, 0.4);
+      top: 20%;
+      left: 49%;
+    }
+
+    svg {
+      width: 19px;
+      height: 17px;
+      fill: $blue-dark;
+    }
+  }
+
+  &__link {
+    position: relative;
+    padding: 20px 35px;
+    transition: background-color 0.5s;
+
+    svg {
+      transition: fill 0.5s;
+    }
+
+    &--like {
+      border-radius: 25px 0 0 25px;
+    }
+
+    &--cart {
+      border-radius: 0 25px 25px 0;
+    }
+
+    &:hover {
+      background-color: $blue300;
+      svg {
+        fill: $white;
+      }
+    }
+  }
+
+  &__count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $blue-dark;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    font-size: 10px;
+    top: 15px;
+    right: 25px;
+  }
+}
