@@ -1,6 +1,10 @@
 .header {
   flex: 1 0 auto;
 
+  &__menu {
+    padding-left: 168px;
+  }
+
   &__inner {
     padding: 45px 0;
     display: flex;

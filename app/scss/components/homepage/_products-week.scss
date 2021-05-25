@@ -1,11 +1,12 @@
 .products-week {
-  margin-bottom: 180px;
+  margin-bottom: 186px;
 
   &__title {
     text-align: center;
     font-weight: $fw700;
     font-size: 36px;
     color: #191919;
+    margin-bottom: 15px;
 
     @include line-clamp(1);
   }

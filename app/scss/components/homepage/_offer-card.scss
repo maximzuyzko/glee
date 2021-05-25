@@ -1,0 +1,67 @@
+.offer-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 85px;
+
+  &__wrap {
+    margin-top: -100px;
+    margin-right: 20px;
+  }
+
+  &__info {
+    padding-top: 75px;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    max-width: 250px;
+    font-size: 26px;
+    font-weight: $fw700;
+    color: $blue-dark;
+    line-height: 1.2;
+
+    @include line-clamp(2);
+  }
+
+  &__desrc {
+    font-family: $Rubik;
+    color: $blue-dark;
+    max-width: 330px;
+    margin-bottom: 34px;
+
+    @include line-clamp(3);
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 20px;
+    font-family: $Rubik;
+    font-weight: $fw500;
+    color: $blue500;
+    font-size: 15px;
+    background-color: transparent;
+    border: solid 1px $blue500;
+    border-radius: 5px;
+    transition: background-color 0.5s, color 0.5s;
+
+    span {
+      margin-right: 44px;
+    }
+
+    svg {
+      width: 22px;
+      height: 9px;
+      fill: $blue500;
+      transition: fill 0.5s;
+    }
+
+    &:hover {
+      color: $peach;
+      background-color: $blue500;
+      svg {
+        fill: $peach;
+      }
+    }
+  }
+}

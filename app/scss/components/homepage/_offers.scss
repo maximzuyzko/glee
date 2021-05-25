@@ -1,0 +1,19 @@
+.offers {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 126px;
+  }
+
+  &__item {
+    flex-grow: 1;
+    max-width: 870px;
+    max-height: 390px;
+    background-color: rgba($peach, 0.4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+

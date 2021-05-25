@@ -14,20 +14,24 @@
 
   }
 
-  &__info p {
-    @include line-clamp(3);
-
-    margin-bottom: 40px;
-    font-family: $Rubik;
-    font-size: 18px;
-    max-width: 420px;
+  &__info {
+    padding-bottom: 60px;
   }
 
-  &__name p {
+  &__descr {
+    @include line-clamp(3);
+
+    margin-bottom: 35px;
+    font-family: $Rubik;
+    font-size: 18px;
+    max-width: 360px;
+  }
+
+  &__name {
     @include line-clamp(2);
 
     max-width: 420px;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
     font-family: $Rubik;
     font-weight: $fw500;
     font-size: 72px;
@@ -38,13 +42,12 @@
 
   &__link {
     display: inline-block;
-    padding: 21px 20px 21px 27px;
+    padding: 21px 27px;
     font-family: $Rubik;
     font-weight: $fw500;
     color: $white;
     font-size: 15px;
     background-color: $blue300;
-    max-width: 200px;
     transition: background-color 0.5s, color 0.5s;
 
     span {

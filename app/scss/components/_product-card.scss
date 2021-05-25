@@ -34,13 +34,14 @@
   &__wrap {
     width: 250px;
     height: 210px;
-    margin-bottom: 35px;
+    margin-bottom: 50px;
   }
 
   &__title {
     @include line-clamp(1);
 
     font-weight: $fw500;
+    font-size: 16px;
     margin-bottom: 17px;
   }
 
