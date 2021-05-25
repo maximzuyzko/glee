@@ -1,5 +1,5 @@
 $(function () {
-    $('.hero-slider__items').slick({
+    $('.product-slider__items').slick({
         dots: true,
         arrows: false,
         /*autoplay: true,

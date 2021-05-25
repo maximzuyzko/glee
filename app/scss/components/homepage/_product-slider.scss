@@ -1,4 +1,4 @@
-.hero-slider {
+.product-slider {
   position: relative;
 
   &__items {
@@ -99,6 +99,12 @@
     justify-content: center;
     position: absolute;
     bottom: 45px;
+
+    li.slick-active {
+      button {
+        opacity: 1;
+      }
+    }
 
     li {
       &:not(:last-child) {
