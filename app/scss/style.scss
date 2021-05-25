@@ -1,14 +1,15 @@
-@import "fonts";
-@import "vars";
-@import "reset";
-@import "libs";
-@import "mixins";
-@import "global";
+@import "settings/fonts";
+@import "settings/vars";
+@import "settings/reset";
+@import "settings/libs";
+@import "settings/mixins";
+@import "settings/global";
 
 
 /*header*/
 
 @import "components/header";
+@import "components/btn-circle";
 
 /*hero*/
 
@@ -20,11 +21,12 @@
 
 /*gallery*/
 
+@import "components/homepage/products-filter";
 @import "components/homepage/products-week";
 
 /*card*/
 
-@import "components/homepage/product-card";
+@import "components/product-card";
 
 /*footer*/
 

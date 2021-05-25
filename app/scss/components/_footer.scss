@@ -23,9 +23,12 @@
   }
 
   &__title {
+    padding-top: 20px;
     margin-bottom: 25px;
     font-weight: $fw700;
+    font-size: 16px;
     text-transform: uppercase;
+    color: #1f2044;
 
     @include line-clamp(1);
   }
@@ -36,12 +39,15 @@
     margin-bottom: 35px;
   }
 
-  &__box:not(:last-child) {
-    margin-bottom: 10px;
+  &__box {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
     font-family: $Rubik;
+    font-size: 14px;
     color: $grey;
 
     @include line-clamp(1);
@@ -53,14 +59,13 @@
     display: flex;
     justify-content: space-between;
 
-    .footer-menu {
-      padding-left: 0;
-
+    .menu {
       &__link {
         font-weight: $fw400;
         font-size: 14px;
         @include hover-link;
       }
+
       &__list {
         &:not(:first-child) {
           padding-left: 15px;
@@ -96,18 +101,19 @@
     cursor: pointer;
 
     &:hover {
-      color: $blue300;
-      background-color: $white;
+      background-color: darken($blue300, 20%);
     }
   }
 
-  &__address {
-    a {
-      @include hover-link;
-    }
+  .footer-address {
+    &__item {
+      a {
+        @include hover-link;
+      }
 
-    &:not(:last-child) {
-      margin-bottom: 15px;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
   }
 }

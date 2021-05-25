@@ -8,7 +8,7 @@
   text-align: center;
 
   &:hover {
-    box-shadow: 0 6px 47px 3px rgba(163, 187, 200, 0.55);
+    box-shadow: 0 6px 47px 3px rgba(163, 187, 200, 0.35);
 
     .product-card__nav {
       opacity: 1;
@@ -21,9 +21,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: box-shadow 0.5s;
   }
 
@@ -77,19 +74,11 @@
   }
 
   &__btn {
-    padding: 0;
     width: 45px;
     height: 45px;
-    border-radius: 50%;
-    border: none;
     box-shadow: 0 3px 15px 1px rgba(163, 187, 200, 0.8);
-    background-color: #FFFFFF;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.5s,
-    fill 0.5s;
+    background-color: $white;
+    transition: fill 0.3s;
 
     svg {
       width: 20px;

@@ -36,6 +36,13 @@ body {
   margin: -1px;
 }
 
+button {
+  padding: 0;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 button,
 a,
 textarea,
@@ -47,11 +54,11 @@ input {
   }*/
 
   &:focus {
-    border: 1px solid $blue300;
+    border: 1px solid $blue500;
   }
 
   &:active {
-    border: 1px solid $blue500;
+    border: 1px solid $blue-dark;
   }
 }
 

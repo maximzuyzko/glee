@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="css/style.min.css">
-        <title>Glee</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/style.min.css">
+<title>Glee</title>
     </head>
     <body>
         <header class="header">
@@ -39,7 +39,7 @@
             </ul>
 
             <div class="user-nav">
-                <button class="user-nav__btn user-nav__btn--search" type="button">
+                <button class="btn-circle user-nav__btn user-nav__btn--search" type="button">
                     <span class="visually-hidden">click on this button opens the search menu</span>
                     <svg>
                         <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -49,7 +49,7 @@
 
                 <div class="user-nav__items">
                     <a class="user-nav__link user-nav__link--like" href="#">
-                        <span class="visually-hidden">click on this link opens the menu with items you liked before</span>
+                        <span class="visually-hidden">click on this link opens the page with items your liked before</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#like-icon"></use>
                         </svg>
@@ -57,15 +57,15 @@
                     </a>
 
                     <a class="user-nav__link user-nav__link--cart" href="#">
-                        <span class="visually-hidden">click on this link opens the cart</span>
+                        <span class="visually-hidden">click on this link opens the page with your cart</span>
                         <svg>
                             <use xlink:href="images/sprite.svg#cart-icon"></use>
                         </svg>
-                        <span class="user-nav__count user-nav__count--right">0</span>
+                        <span class="user-nav__count">0</span>
                     </a>
                 </div>
 
-                <button class="user-nav__btn user-nav__btn--menu" type="button">
+                <button class="btn-circle user-nav__btn user-nav__btn--menu" type="button">
                     <span class="visually-hidden">click on this button opens the menu</span>
                     <svg>
                         <use xlink:href="images/sprite.svg#menu-icon"></use>
@@ -85,7 +85,7 @@
                 <div class="container">
                     <div class="hero-slider__inner">
                         <div class="hero-slider__info">
-                            <div class="hero-slider__descr">
+                            <div class="hero-slider__name">
                                 <p>Smart and trendy</p>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nostrum, praesentium.</p>
@@ -96,7 +96,9 @@
                                 </svg>
                             </a>
                         </div>
-                        <img class="hero-slider__img" src="images/img-slider.png" alt="sofa image">
+                        <div class="hero-slider__wrap">
+                            <img class="hero-slider__img" src="images/img-slider.png" alt="sofa image">
+                        </div>
                     </div>
                 </div>
             </li>
@@ -105,7 +107,7 @@
                 <div class="container">
                     <div class="hero-slider__inner">
                         <div class="hero-slider__info">
-                            <div class="hero-slider__descr">
+                            <div class="hero-slider__name">
                                 <p>Smart and trendy</p>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nostrum, praesentium.</p>
@@ -116,7 +118,9 @@
                                 </svg>
                             </a>
                         </div>
-                        <img class="hero-slider__img" src="images/img-slider.png" alt="sofa image">
+                        <div class="hero-slider__wrap">
+                            <img class="hero-slider__img" src="images/img-slider.png" alt="sofa image">
+                        </div>
                     </div>
                 </div>
             </li>
@@ -125,7 +129,7 @@
                 <div class="container">
                     <div class="hero-slider__inner">
                         <div class="hero-slider__info">
-                            <div class="hero-slider__descr">
+                            <div class="hero-slider__name">
                                 <p>Smart and trendy</p>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, nostrum, praesentium.</p>
@@ -136,7 +140,9 @@
                                 </svg>
                             </a>
                         </div>
-                        <img class="hero-slider__img" src="images/img-slider.png" alt="sofa image">
+                        <div class="hero-slider__wrap">
+                            <img class="hero-slider__img" src="images/img-slider.png" alt="sofa image">
+                        </div>
                     </div>
                 </div>
             </li>
@@ -182,21 +188,21 @@
   <div class="container">
     <h2 class="products-week__title">Products of the week</h2>
 
-    <ul class="products-week__filter">
-      <li class="products-week__item">
-        <button class="products-week__btn" type="button" data-filter="all">All</button>
+    <ul class="products-filter">
+      <li class="products-filter__item">
+        <button class="products-filter__btn" type="button" data-filter="all">All</button>
       </li>
-      <li class="products-week__item">
-        <button class="products-week__btn" type="button" data-filter=".furnitures">Furnitures</button>
+      <li class="products-filter__item">
+        <button class="products-filter__btn" type="button" data-filter=".furnitures">Furnitures</button>
       </li>
-      <li class="products-week__item">
-        <button class="products-week__btn" type="button" data-filter=".chairs">Chairs</button>
+      <li class="products-filter__item">
+        <button class="products-filter__btn" type="button" data-filter=".chairs">Chairs</button>
       </li>
-      <li class="products-week__item">
-        <button class="products-week__btn" type="button" data-filter=".lighting">Lighting</button>
+      <li class="products-filter__item">
+        <button class="products-filter__btn" type="button" data-filter=".lighting">Lighting</button>
       </li>
-      <li class="products-week__item">
-        <button class="products-week__btn" type="button" data-filter=".decor">Decor</button>
+      <li class="products-filter__item">
+        <button class="products-filter__btn" type="button" data-filter=".decor">Decor</button>
       </li>
     </ul>
 
@@ -210,12 +216,10 @@
             <img class="product-card__img" src="images/cards/1.png" alt="card image">
           </div>
           <h3 class="product-card__title">Wooden radio</h3>
-          <div class="product-card__price">
-            <p><span>$</span>29.00</p>
-          </div>
+          <p class="product-card__price"><span>$</span>29.00</p>
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
-              <a class="product-card__btn product-card__btn--search" href="#">
+              <a class="btn-circle product-card__btn product-card__btn--search" href="#">
                 <span class="visually-hidden">click on this link opens the search menu</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -223,7 +227,7 @@
               </a>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--cart" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--cart" type="button">
                 <span class="visually-hidden">click on this button add item to your cart</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#cart-icon"></use>
@@ -231,7 +235,7 @@
               </button>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--like" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--like" type="button">
                 <span class="visually-hidden">click on this button add item to your favorites</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -251,12 +255,10 @@
             <img class="product-card__img" src="images/cards/2.png" alt="card image">
           </div>
           <h3 class="product-card__title">Wooden chair</h3>
-          <div class="product-card__price">
-            <p><span>$</span>29.00</p>
-          </div>
+          <p class="product-card__price"><span>$</span>29.00</p>
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
-              <a class="product-card__btn product-card__btn--search" href="#">
+              <a class="btn-circle product-card__btn product-card__btn--search" href="#">
                 <span class="visually-hidden">click on this link opens the search menu</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -264,7 +266,7 @@
               </a>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--cart" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--cart" type="button">
                 <span class="visually-hidden">click on this button add item to your cart</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#cart-icon"></use>
@@ -272,7 +274,7 @@
               </button>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--like" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--like" type="button">
                 <span class="visually-hidden">click on this button add item to your favorites</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -292,12 +294,10 @@
             <img class="product-card__img" src="images/cards/3.png" alt="card image">
           </div>
           <h3 class="product-card__title">White chair</h3>
-          <div class="product-card__price">
-            <p><span>$</span>29.00</p>
-          </div>
+          <p class="product-card__price"><span>$</span>29.00</p>
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
-              <a class="product-card__btn product-card__btn--search" href="#">
+              <a class="btn-circle product-card__btn product-card__btn--search" href="#">
                 <span class="visually-hidden">click on this link opens the search menu</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -305,7 +305,7 @@
               </a>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--cart" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--cart" type="button">
                 <span class="visually-hidden">click on this button add item to your cart</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#cart-icon"></use>
@@ -313,7 +313,7 @@
               </button>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--like" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--like" type="button">
                 <span class="visually-hidden">click on this button add item to your favorites</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -333,12 +333,10 @@
             <img class="product-card__img" src="images/cards/4.png" alt="card image">
           </div>
           <h3 class="product-card__title">Retro table</h3>
-          <div class="product-card__price">
-            <p><span>$</span>29.00</p>
-          </div>
+          <p class="product-card__price"><span>$</span>29.00</p>
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
-              <a class="product-card__btn product-card__btn--search" href="#">
+              <a class="btn-circle product-card__btn product-card__btn--search" href="#">
                 <span class="visually-hidden">click on this link opens the search menu</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -346,7 +344,7 @@
               </a>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--cart" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--cart" type="button">
                 <span class="visually-hidden">click on this button add item to your cart</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#cart-icon"></use>
@@ -354,7 +352,7 @@
               </button>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--like" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--like" type="button">
                 <span class="visually-hidden">click on this button add item to your favorites</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -374,12 +372,10 @@
             <img class="product-card__img" src="images/cards/5.png" alt="card image">
           </div>
           <h3 class="product-card__title">Wooden radio</h3>
-          <div class="product-card__price">
-            <p><span>$</span>29.00</p>
-          </div>
+          <p class="product-card__price"><span>$</span>29.00</p>
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
-              <a class="product-card__btn product-card__btn--search" href="#">
+              <a class="btn-circle product-card__btn product-card__btn--search" href="#">
                 <span class="visually-hidden">click on this link opens the search menu</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -387,7 +383,7 @@
               </a>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--cart" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--cart" type="button">
                 <span class="visually-hidden">click on this button add item to your cart</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#cart-icon"></use>
@@ -395,7 +391,7 @@
               </button>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--like" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--like" type="button">
                 <span class="visually-hidden">click on this button add item to your favorites</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -415,12 +411,10 @@
             <img class="product-card__img" src="images/cards/6.png" alt="card image">
           </div>
           <h3 class="product-card__title">Wooden chair</h3>
-          <div class="product-card__price">
-            <p><span>$</span>29.00</p>
-          </div>
+          <p class="product-card__price"><span>$</span>29.00</p>
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
-              <a class="product-card__btn product-card__btn--search" href="#">
+              <a class="btn-circle product-card__btn product-card__btn--search" href="#">
                 <span class="visually-hidden">click on this link opens the search menu</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -428,7 +422,7 @@
               </a>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--cart" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--cart" type="button">
                 <span class="visually-hidden">click on this button add item to your cart</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#cart-icon"></use>
@@ -436,7 +430,7 @@
               </button>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--like" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--like" type="button">
                 <span class="visually-hidden">click on this button add item to your favorites</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -456,12 +450,10 @@
             <img class="product-card__img" src="images/cards/7.png" alt="card image">
           </div>
           <h3 class="product-card__title">White chair</h3>
-          <div class="product-card__price">
-            <p><span>$</span>29.00</p>
-          </div>
+          <p class="product-card__price"><span>$</span>29.00</p>
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
-              <a class="product-card__btn product-card__btn--search" href="#">
+              <a class="btn-circle product-card__btn product-card__btn--search" href="#">
                 <span class="visually-hidden">click on this link opens the search menu</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -469,7 +461,7 @@
               </a>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--cart" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--cart" type="button">
                 <span class="visually-hidden">click on this button add item to your cart</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#cart-icon"></use>
@@ -477,7 +469,7 @@
               </button>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--like" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--like" type="button">
                 <span class="visually-hidden">click on this button add item to your favorites</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -497,12 +489,10 @@
             <img class="product-card__img" src="images/cards/8.png" alt="card image">
           </div>
           <h3 class="product-card__title">Retro table</h3>
-          <div class="product-card__price">
-            <p><span>$</span>29.00</p>
-          </div>
+          <p class="product-card__price"><span>$</span>29.00</p>
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
-              <a class="product-card__btn product-card__btn--search" href="#">
+              <a class="btn-circle product-card__btn product-card__btn--search" href="#">
                 <span class="visually-hidden">click on this link opens the search menu</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
@@ -510,7 +500,7 @@
               </a>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--cart" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--cart" type="button">
                 <span class="visually-hidden">click on this button add item to your cart</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#cart-icon"></use>
@@ -518,7 +508,7 @@
               </button>
             </li>
             <li class="product-card__nav-item">
-              <button class="product-card__btn product-card__btn--like" type="button">
+              <button class="btn-circle product-card__btn product-card__btn--like" type="button">
                 <span class="visually-hidden">click on this button add item to your favorites</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#like-icon"></use>
@@ -537,25 +527,27 @@
     <div class="container">
         <ul class="footer__items">
             <li class="footer__item">
-                <a class="logo" href="#">
-                    <img class="logo__img footer__logo" src="images/logo.png" alt="Glee logo">
-                </a>
-                <div class="footer__address">
-                    <a href="#">
-                        <p>ADDRESS: 4772 Wines Lane</p>
-                        <p>Houston, TX 77032</p>
+                <address class="footer-address">
+                    <a class="logo footer__logo" href="#">
+                        <img class="logo__img" src="images/logo.png" alt="Glee logo">
                     </a>
-                </div>
-                <div class="footer__address">
-                    <p>Telephone: <a href="tel:+8323475843">+832-347-5843</a></p>
-                </div>
-                <div class="footer__address">
-                    <p>Email: <a href="mailto:contact@Glee.com">contact@Glee.com</a></p>
-                </div>
+                    <div class="footer-address__item">
+                        <a href="#">
+                            <p>ADDRESS: 4772 Wines Lane</p>
+                            <p>Houston, TX 77032</p>
+                        </a>
+                    </div>
+                    <div class="footer-address__item">
+                        <p>Telephone: <a href="tel:+8323475843">+832-347-5843</a></p>
+                    </div>
+                    <div class="footer-address__item">
+                        <p>Email: <a href="mailto:contact@Glee.com">contact@Glee.com</a></p>
+                    </div>
+                </address>
             </li>
 
             <li class="footer__item">
-                <h2 class="footer__title">Services</h2>
+                <h3 class="footer__title">Services</h3>
                 <ul class="footer__list">
                     <li class="footer__box">
                         <a class="footer__link" href="#">About us</a>
@@ -576,25 +568,25 @@
             </li>
 
             <li class="footer__item">
-                <h2 class="footer__title">Account</h2>
+                <h3 class="footer__title">Account</h3>
                 <ul class="footer__list">
                     <li class="footer__box">
-                        <a class="footer__link" href="">Your Account</a>
+                        <a class="footer__link" href="#">Your Account</a>
                     </li>
                     <li class="footer__box">
-                        <a class="footer__link" href="">Checkout</a>
+                        <a class="footer__link" href="#">Checkout</a>
                     </li>
                     <li class="footer__box">
-                        <a class="footer__link" href="">Login</a>
+                        <a class="footer__link" href="#">Login</a>
                     </li>
                     <li class="footer__box">
-                        <a class="footer__link" href="">Register</a>
+                        <a class="footer__link" href="#">Register</a>
                     </li>
                 </ul>
             </li>
 
             <li class="footer__item">
-                <h2 class="footer__title">Newsletter</h2>
+                <h3 class="footer__title">Newsletter</h3>
                 <div class="footer__text">
                     <p>Subscribe by our newsletter and get update protidin.</p>
                 </div>
@@ -607,7 +599,7 @@
 
         <div class="footer__bottom">
             <span class="footer__copy">©2020 CopyRight Example. All rights reserved.</span>
-            <ul class="menu footer-menu">
+            <ul class="menu">
                 <li class="menu__list footer-menu__list">
                     <a class="menu__link footer-menu__link" href="#" target="_blank">Home</a>
                 </li>
