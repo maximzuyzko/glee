@@ -1,0 +1,24 @@
+.products-filter {
+  font-weight: $fw700;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  .mixitup-control-active {
+    color: #1a1a1a;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__btn {
+    color: #8b8b8b;
+    transition: color 0.5s ease;
+    &:hover {
+      color: #1a1a1a;
+    }
+  }
+}

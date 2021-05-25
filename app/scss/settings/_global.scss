@@ -1,0 +1,64 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: $white;
+  color: $blue500;
+  font-family: $DMSans;
+  font-weight: $fw400;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+  &--big {
+    max-width: 1800px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+button {
+  padding: 0;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button,
+a,
+textarea,
+input {
+  outline: transparent;
+
+  /*&:visited {
+    color: $blue-dark;
+  }*/
+
+  &:focus {
+    border: 1px solid $blue500;
+  }
+
+  &:active {
+    border: 1px solid $blue-dark;
+  }
+}
+

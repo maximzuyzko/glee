@@ -1,0 +1,131 @@
+.hero-slider {
+  position: relative;
+
+  &__items {
+    background-color: $peach;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 820px;
+    min-width: 320px;
+
+  }
+
+  &__info p {
+    @include line-clamp(3);
+
+    margin-bottom: 40px;
+    font-family: $Rubik;
+    font-size: 18px;
+    max-width: 420px;
+  }
+
+  &__name p {
+    @include line-clamp(2);
+
+    max-width: 420px;
+    margin-bottom: 45px;
+    font-family: $Rubik;
+    font-weight: $fw500;
+    font-size: 72px;
+    line-height: 1;
+    color: $blue-dark;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 21px 20px 21px 27px;
+    font-family: $Rubik;
+    font-weight: $fw500;
+    color: $white;
+    font-size: 15px;
+    background-color: $blue300;
+    max-width: 200px;
+    transition: background-color 0.5s, color 0.5s;
+
+    span {
+      margin-right: 50px;
+    }
+
+    svg {
+      width: 22px;
+      height: 9px;
+      fill: $white;
+      transition: fill 0.5s;
+    }
+
+    &:hover {
+      color: $blue300;
+      background-color: $white;
+      svg {
+        fill: $blue300;
+      }
+    }
+  }
+
+  &__wrap {
+    width: 650px;
+    max-height: 100%;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -20%;
+      top: 50%;
+      width: 634px;
+      height: 634px;
+      border-radius: 50%;
+      background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+  }
+
+  &__img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .slick-dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 45px;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      button {
+        font-family: $Rubik;
+        font-weight: $fw500;
+        color: $blue-dark;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+        line-height: 1;
+        background-color: #FFFFFF;
+        border: none;
+        border-radius: 50%;
+        opacity: 0.3;
+        transition: opacity 0.5s ease;
+
+        &:hover {
+          opacity: 1;
+        }
+
+      }
+    }
+  }
+}
+
