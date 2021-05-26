@@ -1,0 +1,46 @@
+.insights {
+  margin-bottom: 100px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: $fw700;
+    color: $black-link;
+    transition: color 0.5s;
+
+    @include line-clamp(1);
+
+    svg {
+      margin-left: 18px;
+      width: 7px;
+      height: 12px;
+      fill: $black-link;
+      transition: fill 0.5s;
+    }
+
+    &:hover {
+      color: $blue300;
+      svg {
+        fill: $blue300;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__list {
+    flex-grow: 1;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .design {
-  margin-bottom: 120px;
+  margin-bottom: 80px;
 
   &__title {
     margin-bottom: 15px;
@@ -50,6 +50,10 @@
     margin-bottom: 10px;
 
     @include  line-clamp(2);
+  }
+
+  &__style {
+    max-width: 60px;
   }
 
   &__nav {
