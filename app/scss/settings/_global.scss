@@ -36,6 +36,15 @@ body {
   margin: -1px;
 }
 
+.title {
+  text-align: center;
+  font-weight: $fw700;
+  font-size: 36px;
+  color: $black-title;
+
+  @include line-clamp(1)
+}
+
 button {
   padding: 0;
   border: transparent;

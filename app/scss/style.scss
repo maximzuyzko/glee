@@ -6,30 +6,21 @@
 @import "settings/global";
 
 
-/*header*/
-
 @import "components/header";
 @import "components/btn-circle";
 
-/*hero*/
-
 @import "components/homepage/product-slider";
 
-/*advantages*/
-
 @import "components/homepage/advantages";
-
-/*gallery*/
 
 @import "components/homepage/products-filter";
 @import "components/homepage/products-week";
 @import "components/homepage/offers";
 @import "components/homepage/offer-card";
 
-/*card*/
-
 @import "components/product-card";
+@import "components/homepage/design";
 
-/*footer*/
+
 
 @import "components/footer";
