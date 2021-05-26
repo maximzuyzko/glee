@@ -7,6 +7,15 @@
   &__wrap {
     margin-top: -100px;
     margin-right: 20px;
+    width: 250px;
+    height: 410px;
+  }
+
+  &__img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__info {
