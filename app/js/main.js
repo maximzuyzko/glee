@@ -6,19 +6,13 @@ $(function () {
         autoplaySpeed: 5000,
     })
 
-    /*var mixer = mixitup('.products-week__items');*/
-
-    /*var mixerOne = mixitup('.products-week__items', {
-        controls: {
-            scope: 'local'
-        }
+    $('.partners__items').slick({
+        arrows: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
     });
-
-    var mixerTwo = mixitup('.design__items', {
-        controls: {
-            scope: 'local'
-        }
-    });*/
 
     let containerEl1 = document.querySelector('.products-week');
     let containerEl2 = document.querySelector('.design');

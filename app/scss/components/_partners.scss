@@ -1,0 +1,29 @@
+.partners {
+  background-color: rgba($peach, 0.2);
+  padding: 265px 0 92px;
+  z-index: 1;
+
+  &__items {
+    display: flex;
+    min-height: 1px;
+    min-width: 1px;
+  }
+
+  &__list {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    width: 200px;
+  }
+
+  &__img {
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+
+  &--with-articles {
+    padding: 264px 0 92px;
+  }
+}
