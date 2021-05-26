@@ -1,0 +1,57 @@
+.design {
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    z-index: 1;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+
+  &__product-card {
+    padding: 30px 0 0 35px;
+    text-align: left;
+    border-radius: 0;
+    background-color: #f8f8f8;
+    height: 100%;
+  }
+
+  &__list {
+    margin-right: 30px;
+    margin-bottom: 34px;
+    max-width: 370px;
+    max-height: 246px;
+    width: 100%;
+    height: 245px;
+  }
+
+  &__wrap {
+    margin-bottom: auto;
+    position: absolute;
+    right: 0;
+    bottom: 35px;
+    width: 270px;
+    height: 135px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: $fw700;
+    color: $black-subtitle;
+    max-width: 175px;
+    margin-bottom: 10px;
+
+    @include  line-clamp(2);
+  }
+
+  &__nav {
+    top: 80%;
+    z-index: 2;
+  }
+}
