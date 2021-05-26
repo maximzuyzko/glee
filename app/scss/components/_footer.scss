@@ -28,7 +28,7 @@
     font-weight: $fw700;
     font-size: 16px;
     text-transform: uppercase;
-    color: #1f2044;
+    color: $black-title-another;
 
     @include line-clamp(1);
   }
@@ -90,7 +90,7 @@
 
     &::placeholder {
       font-size: 12px;
-      color: #234969;
+      color: $blue-placeholder;
     }
   }
   &__btn {

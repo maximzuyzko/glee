@@ -44,7 +44,7 @@
 
     font-weight: $fw700;
     font-size: 18px;
-    color: #414141;
+    color: $grey800;
     background-position: top left;
     background-repeat: no-repeat;
   }
@@ -52,6 +52,6 @@
   &__descr {
     @include line-clamp(2);
 
-    color: #585858;
+    color: $grey700;
   }
 }
