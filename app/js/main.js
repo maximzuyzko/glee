@@ -2,8 +2,8 @@ $(function () {
     $('.product-slider__items').slick({
         dots: true,
         arrows: false,
-        autoplay: true,
-        autoplaySpeed: 5000,
+        /*autoplay: true,
+        autoplaySpeed: 5000,*/
     })
 
     $('.partners__items').slick({
@@ -24,4 +24,9 @@ $(function () {
     (() => mixitup(containerEl1, config))();
     (() => mixitup(containerEl2, config))();
 
+    $('.header__button').on('click', function () {
+        $(this).toggleClass('header__button--active');
+        $('.menu--header').toggleClass('menu--active');
+        $('.body').toggleClass('body-stop-scroll');
+    });
 });

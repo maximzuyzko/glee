@@ -1,6 +1,10 @@
 .video-popup {
   margin-bottom: 107px;
 
+  @include adp($l) {
+    margin-bottom: 40px;
+  }
+
   &__link {
     height: 500px;
     display: flex;
@@ -10,6 +14,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+
+    @include adp($l) {
+      height: 400px;
+    }
 
     &::after {
       content: "";

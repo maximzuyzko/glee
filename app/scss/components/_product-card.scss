@@ -8,6 +8,10 @@
   text-align: center;
   transition: box-shadow 0.5s;
 
+  @include adp($l) {
+    padding: 20px 15px 30px;
+  }
+
   &:hover {
     box-shadow: 0 6px 47px 3px rgba(163, 187, 200, 0.35);
 
@@ -28,6 +32,11 @@
     width: 250px;
     height: 210px;
     margin-bottom: 50px;
+
+    @include adp($l) {
+      width: 210px;
+      margin-bottom: 20px;
+    }
   }
 
   &__img {

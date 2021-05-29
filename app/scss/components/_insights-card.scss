@@ -28,6 +28,10 @@
     width: 370px;
     height: 250px;
     overflow: hidden;
+
+    @include adp($l) {
+      width: 300px;
+    }
   }
 
   &__img {
@@ -69,6 +73,10 @@
     max-height: 181px;
     height: 100%;
     position: relative;
+
+    @include adp($l) {
+      padding: 35px 15px 15px;
+    }
   }
 
   &__name {

@@ -4,6 +4,10 @@
   justify-content: center;
   margin-bottom: 80px;
 
+  @include adp($l) {
+    margin-bottom: 30px;
+  }
+
   .mixitup-control-active {
     color: $black-subtitle;
   }

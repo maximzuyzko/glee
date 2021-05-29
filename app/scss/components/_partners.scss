@@ -1,7 +1,11 @@
 .partners {
   background-color: rgba($peach, 0.2);
-  padding: 92px 0;
+  padding: 82px 0 92px;
   z-index: 1;
+
+  @include adp($l) {
+    padding: 40px 0;
+  }
 
   &__items {
     display: flex;

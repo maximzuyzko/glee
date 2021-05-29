@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-between;
     padding-top: 126px;
+    @include adp($l) {
+      padding-top: 0;
+    }
   }
 
   &__item {
@@ -13,6 +16,13 @@
 
     &:not(:last-child) {
       margin-right: 30px;
+      @include adp($l) {
+        margin-right: 0;
+      }
+    }
+
+    @include adp($l) {
+      max-width: 490px;
     }
   }
 }

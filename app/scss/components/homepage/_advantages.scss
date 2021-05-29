@@ -3,6 +3,10 @@
   &__items {
     display: flex;
     margin-bottom: 65px;
+
+    @include adp($l) {
+      margin-bottom: 30px;
+    }
   }
 
   &__item {

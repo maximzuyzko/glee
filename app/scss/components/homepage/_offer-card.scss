@@ -4,11 +4,19 @@
   justify-content: center;
   padding-bottom: 85px;
 
+  @include adp($l) {
+    padding-bottom: 20px;
+  }
+
   &__wrap {
     margin-top: -100px;
     margin-right: 20px;
     width: 250px;
     height: 410px;
+    @include adp($l) {
+      margin-top: 0;
+      height: 300px;
+    }
   }
 
   &__img {
@@ -20,11 +28,15 @@
 
   &__info {
     padding-top: 75px;
+    @include adp($l) {
+      padding-top: 40px;
+      padding-right: 5px;
+    }
   }
 
   &__title {
     margin-bottom: 24px;
-    max-width: 250px;
+    max-width: 240px;
     font-size: 26px;
     font-weight: $fw700;
     color: $blue-dark;

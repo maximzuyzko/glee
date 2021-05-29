@@ -1,6 +1,10 @@
 .products-week {
   margin-bottom: 90px;
 
+  @include adp($l) {
+    margin-bottom: 40px;
+  }
+
   &__title {
     margin-bottom: 15px;
   }
@@ -8,12 +12,15 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
+    margin: 0 -15px;
   }
 
   &__list {
-    margin-right: 30px;
-    margin-bottom: 40px;
-    max-width: 270px;
+    margin: 0 15px 40px;
+    width: calc(100% / 4 - 30px);
+
+    @include adp($l) {
+      margin-bottom: 20px;
+    }
   }
 }
