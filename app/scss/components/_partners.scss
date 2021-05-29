@@ -1,12 +1,10 @@
 .partners {
   background-color: rgba($peach, 0.2);
-  padding: 265px 0 92px;
+  padding: 92px 0;
   z-index: 1;
 
   &__items {
     display: flex;
-    min-height: 1px;
-    min-width: 1px;
   }
 
   &__list {
@@ -23,7 +21,4 @@
     margin: auto;
   }
 
-  &--with-articles {
-    padding: 264px 0 92px;
-  }
 }

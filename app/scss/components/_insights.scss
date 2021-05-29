@@ -1,5 +1,15 @@
 .insights {
-  margin-bottom: -173px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-color: rgba($peach, 0.2);
+    height: 182px;
+    bottom: 0;
+    z-index: -1;
+  }
 
   &__top {
     display: flex;
@@ -17,8 +27,11 @@
 
     @include line-clamp(1);
 
+    span {
+      margin-right: 18px;
+    }
+
     svg {
-      margin-left: 18px;
       width: 7px;
       height: 12px;
       fill: $black-link;

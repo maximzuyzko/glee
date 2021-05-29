@@ -17,7 +17,7 @@
                 <img class="logo__img" src="images/logo.png" alt="Glee logo">
             </a>
 
-            <ul class="menu header__menu">
+            <ul class="menu">
                 <li class="menu__list">
                     <a class="menu__link" href="#" target="_blank">Home<span>+</span></a>
                 </li>
@@ -214,7 +214,7 @@
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
               <a class="btn-circle product-card__btn product-card__btn--search" href="#">
-                <span class="visually-hidden">click on this link opens the search menu</span>
+                <span class="visually-hidden">click on this link opens the detailed description</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
                 </svg>
@@ -253,7 +253,7 @@
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
               <a class="btn-circle product-card__btn product-card__btn--search" href="#">
-                <span class="visually-hidden">click on this link opens the search menu</span>
+                <span class="visually-hidden">click on this link opens the detailed description</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
                 </svg>
@@ -292,7 +292,7 @@
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
               <a class="btn-circle product-card__btn product-card__btn--search" href="#">
-                <span class="visually-hidden">click on this link opens the search menu</span>
+                <span class="visually-hidden">click on this link opens the detailed description</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
                 </svg>
@@ -331,7 +331,7 @@
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
               <a class="btn-circle product-card__btn product-card__btn--search" href="#">
-                <span class="visually-hidden">click on this link opens the search menu</span>
+                <span class="visually-hidden">click on this link opens the detailed description</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
                 </svg>
@@ -370,7 +370,7 @@
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
               <a class="btn-circle product-card__btn product-card__btn--search" href="#">
-                <span class="visually-hidden">click on this link opens the search menu</span>
+                <span class="visually-hidden">click on this link opens the detailed description</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
                 </svg>
@@ -409,7 +409,7 @@
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
               <a class="btn-circle product-card__btn product-card__btn--search" href="#">
-                <span class="visually-hidden">click on this link opens the search menu</span>
+                <span class="visually-hidden">click on this link opens the detailed description</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
                 </svg>
@@ -448,7 +448,7 @@
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
               <a class="btn-circle product-card__btn product-card__btn--search" href="#">
-                <span class="visually-hidden">click on this link opens the search menu</span>
+                <span class="visually-hidden">click on this link opens the detailed description</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
                 </svg>
@@ -487,7 +487,7 @@
           <ul class="product-card__nav">
             <li class="product-card__nav-item">
               <a class="btn-circle product-card__btn product-card__btn--search" href="#">
-                <span class="visually-hidden">click on this link opens the search menu</span>
+                <span class="visually-hidden">click on this link opens the detailed description</span>
                 <svg>
                   <use xlink:href="images/sprite.svg#search-icon"></use>
                 </svg>
@@ -819,7 +819,7 @@
 </section>
 
             <div class="video-popup">
-    <a class="video-popup__link" href="#" style="background-image: url(images/video-bg.png)">
+    <a class="video-popup__link" data-fancybox href="https://www.youtube.com/watch?v=21qNxnCS8WU" style="background-image: url(images/video-bg.png)">
         <span class="visually-hidden">click on this link opens the video about us</span>
         <svg>
             <use xlink:href="images/sprite.svg#play"></use>
@@ -831,7 +831,8 @@
     <div class="container">
         <div class="insights__top">
             <h2 class="insights__title title">Our Insights & Articles</h2>
-            <a class="insights__link" href="#">View All
+            <a class="insights__link" href="#">
+                <span>View All</span>
                 <svg>
                     <use xlink:href="images/sprite.svg#arrow-right"></use>
                 </svg>
@@ -841,7 +842,7 @@
             <li class="insights__list">
                 <article class="insights-card">
                     <a class="insights-card__link" href="#">
-                        <span class="visually-hidden">click on this link opens the insight card</span>
+                        <span class="visually-hidden">click on this link opens the detailed description</span>
                     </a>
                     <div class="insights-card__wrap">
                         <img class="insights-card__img" src="images/insights/1.png" alt="insights image">
@@ -860,7 +861,7 @@
             <li class="insights__list">
                 <article class="insights-card">
                     <a class="insights-card__link" href="#">
-                        <span class="visually-hidden">click on this link opens the insight card</span>
+                        <span class="visually-hidden">click on this link opens the detailed description</span>
                     </a>
                     <div class="insights-card__wrap">
                         <img class="insights-card__img" src="images/insights/2.png" alt="insights image">
@@ -879,7 +880,7 @@
             <li class="insights__list">
                 <article class="insights-card">
                     <a class="insights-card__link" href="#">
-                        <span class="visually-hidden">click on this link opens the insight card</span>
+                        <span class="visually-hidden">click on this link opens the detailed description</span>
                     </a>
                     <div class="insights-card__wrap">
                         <img class="insights-card__img" src="images/insights/3.png" alt="insights image">
@@ -902,34 +903,54 @@
     <div class="container">
         <ul class="partners__items">
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo1.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo1.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo2.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo2.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo3.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo3.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo4.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo4.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo5.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo5.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo1.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo1.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo2.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo2.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo3.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo3.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo4.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo4.png" alt="partners logo">
+                </a>
             </li>
             <li class="partners__list">
-                <img class="partners__img" src="images/partners/logo5.png" alt="partners logo">
+                <a class="partners__link" href="#">
+                    <img class="partners__img" src="images/partners/logo5.png" alt="partners logo">
+                </a>
             </li>
         </ul>
     </div>
@@ -937,23 +958,24 @@
         </main>
 
         <footer class="footer">
+    <h2 class="visually-hidden">section which contains our contact info and links to other pages of our site</h2>
     <div class="container">
         <ul class="footer__items">
             <li class="footer__item">
-                <address class="footer-address">
+                <address class="footer__address">
                     <a class="logo footer__logo" href="#">
                         <img class="logo__img" src="images/logo.png" alt="Glee logo">
                     </a>
-                    <div class="footer-address__item">
+                    <div class="footer__inner">
                         <a href="#">
                             <p>ADDRESS: 4772 Wines Lane</p>
                             <p>Houston, TX 77032</p>
                         </a>
                     </div>
-                    <div class="footer-address__item">
+                    <div class="footer__inner">
                         <p>Telephone: <a href="tel:+8323475843">+832-347-5843</a></p>
                     </div>
-                    <div class="footer-address__item">
+                    <div class="footer__inner">
                         <p>Email: <a href="mailto:contact@Glee.com">contact@Glee.com</a></p>
                     </div>
                 </address>
@@ -1005,14 +1027,15 @@
                 </div>
                 <form class="footer__form">
                     <label class="visually-hidden" for="email-input">Enter you email</label>
-                    <input class="footer__email" name="request email" type="email" id="email-input" placeholder="Email address"><button class="footer__btn" type="submit">Subscribe</button>
+                    <input class="footer__email" name="request email" type="email" id="email-input" placeholder="Email address">
+                    <button class="footer__btn" type="submit">Subscribe</button>
                 </form>
             </li>
         </ul>
 
         <div class="footer__bottom">
             <span class="footer__copy">©2020 CopyRight Example. All rights reserved.</span>
-            <ul class="menu">
+            <ul class="menu footer-menu">
                 <li class="menu__list footer-menu__list">
                     <a class="menu__link footer-menu__link" href="#" target="_blank">Home</a>
                 </li>

@@ -106,15 +106,14 @@
     }
   }
 
-  .footer-address {
-    &__item {
-      a {
-        @include hover-link;
-      }
-
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
+  &__address {
+    a {
+      @include hover-link;
+    }
+  }
+  &__inner {
+    &:not(:last-child) {
+      margin-bottom: 15px;
     }
   }
 }

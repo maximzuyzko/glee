@@ -26,3 +26,11 @@ $Rubik: 'Rubik', 'Tahoma', sans-serif;
 $fw400: 400;
 $fw500: 500;
 $fw700: 700;
+
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+};
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+};
