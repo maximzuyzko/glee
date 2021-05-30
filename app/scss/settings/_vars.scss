@@ -29,6 +29,10 @@ $fw700: 700;
 
 //breakpoints
 $l: 1024;
+$ml: 996;
+$m: 800;
+$sm: 768;
+$s: 540;
 
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});

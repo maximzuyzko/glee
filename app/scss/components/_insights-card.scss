@@ -32,6 +32,11 @@
     @include adp($l) {
       width: 300px;
     }
+
+    @include adp($ml) {
+      height: 200px;
+      width: 100%;
+    }
   }
 
   &__img {
@@ -77,6 +82,10 @@
     @include adp($l) {
       padding: 35px 15px 15px;
     }
+    @include adp($ml) {
+      height: auto;
+      padding: 25px 10px;
+    }
   }
 
   &__name {
@@ -99,6 +108,10 @@
     line-height: 2.5;
     text-transform: uppercase;
     border-top: 1px solid #e0e0e0;
+
+    @include adp($ml) {
+      margin-top: 0;
+    }
   }
 
   &__descr {

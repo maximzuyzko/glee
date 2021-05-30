@@ -5,6 +5,10 @@
     margin-bottom: 40px;
   }
 
+  @include adp($s) {
+    margin-bottom: 20px;
+  }
+
   &__link {
     height: 500px;
     display: flex;
@@ -17,6 +21,14 @@
 
     @include adp($l) {
       height: 400px;
+    }
+
+    @include adp($m) {
+      height: 300px;
+    }
+
+    @include adp($s) {
+      height: 200px;
     }
 
     &::after {

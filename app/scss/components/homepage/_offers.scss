@@ -6,6 +6,10 @@
     @include adp($l) {
       padding-top: 0;
     }
+
+    @include adp($ml) {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -16,13 +20,22 @@
 
     &:not(:last-child) {
       margin-right: 30px;
+
       @include adp($l) {
         margin-right: 0;
+      }
+      @include adp($ml) {
+        border-bottom: 1px solid $blue-dark;
       }
     }
 
     @include adp($l) {
       max-width: 490px;
+    }
+
+    @include adp($ml) {
+      max-width: none;
+      padding: 10px 0;
     }
   }
 }

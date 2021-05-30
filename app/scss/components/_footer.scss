@@ -4,6 +4,14 @@
   font-size: 14px;
   color: $grey;
 
+  @include adp($sm) {
+    font-size: 16px;
+  }
+
+  @include adp($l) {
+    padding: 25px 0 20px;
+  }
+
   &__logo {
     margin-bottom: 30px;
   }
@@ -14,6 +22,16 @@
     margin-bottom: 35px;
     padding-bottom: 75px;
     border-bottom: 1px solid rgba($blue300, 0.4);
+
+    @include adp($l) {
+      margin-bottom: 15px;
+      padding-bottom: 20px;
+    }
+
+    @include adp($sm) {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
   }
 
   &__item {
@@ -31,6 +49,10 @@
     color: $black-title-another;
 
     @include line-clamp(1);
+
+    @include adp($s) {
+      padding-top: 0;
+    }
   }
 
   &__text {
@@ -53,6 +75,10 @@
 
     @include line-clamp(1);
     @include hover-link;
+
+    @include adp($sm) {
+      font-size: 18px;
+    }
   }
 
   &__bottom {
@@ -60,11 +86,20 @@
     display: flex;
     justify-content: space-between;
 
+    @include adp($s) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .menu {
       &__link {
         font-weight: $fw400;
         font-size: 14px;
         @include hover-link;
+
+        @include adp($sm) {
+          font-size: 18px;
+        }
       }
 
       &__list {
@@ -91,6 +126,10 @@
     &::placeholder {
       font-size: 12px;
       color: $blue-placeholder;
+
+      @include adp($l) {
+        font-size: 14px;
+      }
     }
   }
   &__btn {
@@ -113,6 +152,16 @@
   }
   &__inner {
     &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__copy {
+    @include adp($s) {
       margin-bottom: 15px;
     }
   }

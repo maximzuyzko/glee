@@ -22,5 +22,17 @@
     @include adp($l) {
       margin-bottom: 20px;
     }
+
+    @include adp($ml) {
+      width: calc(100% / 3 - 30px);
+    }
+
+    @include adp($sm) {
+      width: calc(100% / 2 - 30px);
+    }
+
+    @include adp($s) {
+      margin: 0 10px 20px;
+    }
   }
 }

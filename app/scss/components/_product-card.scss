@@ -12,6 +12,10 @@
     padding: 20px 15px 30px;
   }
 
+  @include adp($s) {
+    padding: 5px 0;
+  }
+
   &:hover {
     box-shadow: 0 6px 47px 3px rgba(163, 187, 200, 0.35);
 
@@ -37,6 +41,15 @@
       width: 210px;
       margin-bottom: 20px;
     }
+
+    @include adp($sm) {
+      margin: 0 auto 10px;
+    }
+
+    @include adp($s) {
+      width: 130px;
+      height: 130px;
+    }
   }
 
   &__img {
@@ -52,6 +65,21 @@
     font-weight: $fw500;
     font-size: 16px;
     margin-bottom: 17px;
+
+    @include adp($l) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    @include adp($sm) {
+      font-size: 24px;
+    }
+
+    @include adp($sm) {
+      margin-bottom: 5px;
+      font-size: 20px;
+      @include line-clamp(2);
+    }
   }
 
   &__price {
@@ -59,6 +87,14 @@
 
     font-weight: $fw700;
     color: $blue300;
+
+    @include adp($l) {
+      font-size: 16px;
+    }
+
+    @include adp($sm) {
+      font-size: 20px;
+    }
   }
 
   /*card-nav*/

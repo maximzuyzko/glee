@@ -38,15 +38,23 @@
   &__list {
     margin-right: 30px;
     margin-bottom: 34px;
-    max-width: 370px;
-    width: 100%;
+    width: calc(100% / 3 - 30px);
     height: 245px;
 
     @include adp($l) {
       margin-bottom: 10px;
-      max-width: 300px;
       height: 260px;
     }
+
+    @include adp($m) {
+      width: calc(100% / 2 - 30px);
+    }
+
+    @include adp($s) {
+      width: 100%;
+      margin-right: 0;
+    }
+
   }
 
   &__wrap {
@@ -67,10 +75,18 @@
     margin-bottom: 10px;
 
     @include  line-clamp(2);
+
+    @include adp($s) {
+      max-width: 250px;
+    }
   }
 
   &__style {
     max-width: 60px;
+
+    @include adp($s) {
+      max-width: 100px;
+    }
   }
 
   &__nav {

@@ -42,7 +42,11 @@ body {
   font-size: 36px;
   color: $black-title;
 
-  @include line-clamp(1)
+  @include line-clamp(1);
+
+  @include adp($s) {
+    font-size: 26px;
+  }
 }
 
 button {

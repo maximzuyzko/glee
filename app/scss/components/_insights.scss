@@ -11,11 +11,23 @@
     z-index: -1;
   }
 
+  &__title {
+    @include adp($s) {
+      margin-bottom: 10px;
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 40px;
+
+    @include adp($s) {
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -48,12 +60,21 @@
 
   &__items {
     display: flex;
+
+    @include adp($ml) {
+      flex-wrap: wrap;
+    }
   }
 
   &__list {
     flex-grow: 1;
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include adp($ml) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
   }
 }

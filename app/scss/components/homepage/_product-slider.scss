@@ -1,6 +1,10 @@
 .product-slider {
   position: relative;
 
+  &--scroll {
+    padding-top: 115px;
+  }
+
   &__items {
     background-color: $peach;
   }
@@ -10,12 +14,19 @@
     justify-content: space-between;
     align-items: center;
     height: 820px;
-    min-width: 320px;
 
     @include adp($l) {
       flex-wrap: wrap;
       justify-content: center;
       height: 600px;
+    }
+
+    @include adp($m) {
+      height: 500px;
+    }
+
+    @include adp($s) {
+      height: 400px;
     }
 
   }
@@ -36,10 +47,20 @@
     font-family: $Rubik;
     font-size: 18px;
     max-width: 360px;
+
     @include adp($l) {
       max-width: none;
       margin-bottom: 15px;
       @include line-clamp(2);
+    }
+
+    @include adp($m) {
+      font-size: 22px;
+    }
+
+    @include adp($s) {
+      @include line-clamp(3);
+      font-size: 18px;
     }
   }
 
@@ -53,11 +74,22 @@
     line-height: 1;
     color: $blue-dark;
     text-transform: uppercase;
+
     @include adp($l) {
       max-width: none;
       font-size: 50px;
       margin-bottom: 15px;
     }
+
+    @include adp($sm) {
+      font-size: 36px;
+      margin-bottom: 5px;
+    }
+
+    @include adp($s) {
+      font-size: 26px;
+    }
+
   }
 
   &__link {
@@ -88,6 +120,16 @@
         fill: $blue300;
       }
     }
+
+    @include adp($sm) {
+      font-size: 22px;
+      padding: 15px 27px;
+    }
+
+    @include adp($sm) {
+      font-size: 20px;
+      padding: 10px 15px;
+    }
   }
 
   &__wrap {
@@ -97,6 +139,15 @@
 
     @include adp($l) {
       height: 400px;
+    }
+
+    @include adp($m) {
+      height: 280px;
+    }
+
+    @include adp($sm) {
+      height: 200px;
+      width: 250px;
     }
 
     &::after {
@@ -112,8 +163,7 @@
       z-index: -1;
 
       @include adp($l) {
-        width: 500px;
-        height: 500px;
+        display: none;
       }
     }
   }
@@ -131,6 +181,10 @@
     justify-content: center;
     position: absolute;
     bottom: 45px;
+
+    @include adp($s) {
+      bottom: 10px;
+    }
 
     li.slick-active {
       button {

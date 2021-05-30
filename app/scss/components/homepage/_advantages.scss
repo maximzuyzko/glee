@@ -7,6 +7,10 @@
     @include adp($l) {
       margin-bottom: 30px;
     }
+
+    @include adp($m) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -19,6 +23,18 @@
 
     &:not(:last-child) {
       border-right: 1px solid rgba($blue-dark, 0.1);
+
+      @include adp($m) {
+        border-right: none;
+      }
+    }
+
+    @include adp($m) {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba($blue-dark, 0.1);
+    }
+    @include adp($s) {
+      padding: 10px 0;
     }
   }
 
@@ -41,21 +57,35 @@
     &--credit {
       background-image: url("../images/icons/credit-card.svg");
     }
+
+    @include adp($m) {
+      width: 450px;
+      max-width: none;
+    }
   }
 
   &__title {
-    @include line-clamp(1);
-
     font-weight: $fw700;
     font-size: 18px;
     color: $grey800;
     background-position: top left;
     background-repeat: no-repeat;
+
+    @include line-clamp(1);
+
+    @include adp($sm) {
+      font-size: 20px;
+      @include line-clamp(2);
+    }
   }
 
   &__descr {
+    color: $grey700;
     @include line-clamp(2);
 
-    color: $grey700;
+    @include adp($sm) {
+      font-size: 18px;
+    }
+
   }
 }

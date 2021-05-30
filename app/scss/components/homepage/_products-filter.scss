@@ -8,6 +8,10 @@
     margin-bottom: 30px;
   }
 
+  @include adp($s) {
+    flex-wrap: wrap;
+  }
+
   .mixitup-control-active {
     color: $black-subtitle;
   }
@@ -23,6 +27,10 @@
     transition: color 0.5s ease;
     &:hover {
       color: $black-subtitle;
+    }
+
+    @include adp($l) {
+      font-size: 18px;
     }
   }
 }
