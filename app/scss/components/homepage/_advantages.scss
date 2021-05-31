@@ -8,7 +8,7 @@
       margin-bottom: 30px;
     }
 
-    @include adp($m) {
+    @include adp($ml) {
       flex-direction: column;
     }
   }
@@ -24,17 +24,17 @@
     &:not(:last-child) {
       border-right: 1px solid rgba($blue-dark, 0.1);
 
-      @include adp($m) {
+      @include adp($ml) {
         border-right: none;
       }
     }
 
-    @include adp($m) {
-      padding: 20px 0;
+    @include adp($ml) {
+      padding: 20px 5px;
       border-bottom: 1px solid rgba($blue-dark, 0.1);
     }
     @include adp($s) {
-      padding: 10px 0;
+      padding: 10px 5px;
     }
   }
 
@@ -58,9 +58,13 @@
       background-image: url("../images/icons/credit-card.svg");
     }
 
-    @include adp($m) {
+    @include adp($ml) {
       width: 450px;
       max-width: none;
+    }
+
+    @include adp($s) {
+      padding-left: 70px;
     }
   }
 

@@ -23,12 +23,12 @@
       height: 400px;
     }
 
-    @include adp($m) {
-      height: 300px;
+    @include adp($ml) {
+      height: 200px;
     }
 
     @include adp($s) {
-      height: 200px;
+      height: 150px;
     }
 
     &::after {

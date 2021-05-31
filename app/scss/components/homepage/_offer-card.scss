@@ -8,13 +8,13 @@
     padding-bottom: 20px;
   }
   @include adp($ml) {
-    justify-content: flex-start;
+    justify-content: space-evenly;
     padding-bottom: 0;
   }
 
-  @include adp($s) {
-    justify-content: center;
-  }
+  /*@include adp($m) {
+    justify-content: space-evenly;
+  }*/
 
   &__wrap {
     margin-top: -100px;
@@ -76,7 +76,6 @@
     @include line-clamp(2);
 
     @include adp($ml) {
-      max-width: none;
       margin-bottom: 10px;
     }
 
@@ -96,7 +95,6 @@
     @include line-clamp(3);
 
     @include adp($ml) {
-      max-width: none;
       margin-bottom: 15px;
     }
 

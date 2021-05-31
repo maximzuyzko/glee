@@ -56,15 +56,17 @@ button {
   cursor: pointer;
 }
 
+a {
+  &:visited {
+    color: $blue-dark;
+  }
+}
+
 button,
 a,
 textarea,
 input {
   outline: transparent;
-
-  /*&:visited {
-    color: $blue-dark;
-  }*/
 
   &:focus {
     border: 1px solid $blue500;

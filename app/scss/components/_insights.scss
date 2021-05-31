@@ -61,20 +61,32 @@
   &__items {
     display: flex;
 
-    @include adp($ml) {
+    @include adp($xl) {
+      justify-content: center;
       flex-wrap: wrap;
     }
   }
 
   &__list {
-    flex-grow: 1;
+    max-width: 370px;
     &:not(:last-child) {
       margin-right: 30px;
 
-      @include adp($ml) {
-        margin-right: 0;
+      @include adp($xl) {
         margin-bottom: 15px;
       }
+
+      @include adp($m) {
+        margin-right: 0;
+      }
+    }
+
+    @include adp($xl) {
+      width: calc(100% / 2 - 30px);
+    }
+
+    @include adp($m) {
+      width: 100%;
     }
   }
 }

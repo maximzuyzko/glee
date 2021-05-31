@@ -22,13 +22,8 @@
     }
 
     @include adp($m) {
-      height: 500px;
-    }
-
-    @include adp($s) {
       height: 400px;
     }
-
   }
 
   &__info {
@@ -74,6 +69,10 @@
     line-height: 1;
     color: $blue-dark;
     text-transform: uppercase;
+
+    @include adp($xl) {
+      font-size: 64px;
+    }
 
     @include adp($l) {
       max-width: none;
@@ -155,16 +154,18 @@
       position: absolute;
       right: -20%;
       top: 50%;
-      width: 634px;
-      height: 634px;
+      width: 35vw;
+      height: 35vw;
+      max-width: 634px;
+      max-height: 634px;
       border-radius: 50%;
       background-image: linear-gradient(to left, $white 0%, rgba($white, 0) 100%);
       transform: translateY(-50%);
       z-index: -1;
 
-      @include adp($l) {
+      /*@include adp($l) {
         display: none;
-      }
+      }*/
     }
   }
 

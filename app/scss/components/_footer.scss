@@ -38,6 +38,14 @@
     padding-top: 20px;
     width: 100%;
     max-width: 270px;
+
+    @include adp($ml) {
+      width: auto;
+    }
+
+    @include adp($m) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -52,6 +60,7 @@
 
     @include adp($s) {
       padding-top: 0;
+      font-size: 18px;
     }
   }
 
@@ -77,7 +86,7 @@
     @include hover-link;
 
     @include adp($sm) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 

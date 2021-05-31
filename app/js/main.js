@@ -57,7 +57,7 @@ $(function () {
 
     $('.header__button').on('click', function () {
         $(this).toggleClass('header__button--active');
-        $('.menu--header').toggleClass('menu--active');
+        $('.header__menu').toggleClass('menu--active');
         $('.body').toggleClass('body-stop-scroll');
     });
 

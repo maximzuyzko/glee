@@ -9,7 +9,8 @@
   }
 
   @include adp($s) {
-    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
   }
 
   .mixitup-control-active {
@@ -19,6 +20,11 @@
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include adp($s) {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
     }
   }
 
