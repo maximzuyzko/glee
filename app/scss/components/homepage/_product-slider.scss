@@ -1,10 +1,6 @@
 .product-slider {
   position: relative;
 
-  &--scroll {
-    padding-top: 115px;
-  }
-
   &__items {
     background-color: $peach;
   }
@@ -22,7 +18,7 @@
     }
 
     @include adp($m) {
-      height: 400px;
+      height: 320px;
     }
   }
 
@@ -30,7 +26,7 @@
     padding-bottom: 60px;
 
     @include adp($l) {
-      padding-top: 20px;
+      padding-top: 10px;
       padding-bottom: 0;
       text-align: center;
     }
@@ -50,7 +46,8 @@
     }
 
     @include adp($m) {
-      font-size: 22px;
+      font-size: 20px;
+      margin-bottom: 5px;
     }
 
     @include adp($s) {
@@ -76,8 +73,8 @@
 
     @include adp($l) {
       max-width: none;
-      font-size: 50px;
-      margin-bottom: 15px;
+      font-size: 44px;
+      margin-bottom: 5px;
     }
 
     @include adp($sm) {
@@ -120,12 +117,7 @@
       }
     }
 
-    @include adp($sm) {
-      font-size: 22px;
-      padding: 15px 27px;
-    }
-
-    @include adp($sm) {
+    @include adp($m) {
       font-size: 20px;
       padding: 10px 15px;
     }
@@ -141,10 +133,6 @@
     }
 
     @include adp($m) {
-      height: 280px;
-    }
-
-    @include adp($sm) {
       height: 200px;
       width: 250px;
     }

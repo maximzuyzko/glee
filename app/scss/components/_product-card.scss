@@ -40,7 +40,7 @@
 
     @include adp($xl) {
       width: 210px;
-      margin-bottom: 20px;
+      margin: 0 auto 20px;
     }
 
     @include adp($sm) {
@@ -76,6 +76,14 @@
       font-size: 20px;
       @include line-clamp(2);
     }
+  }
+
+  &__rating {
+    display: none;
+  }
+
+  &__descr {
+    display: none;
   }
 
   &__price {

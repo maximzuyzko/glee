@@ -56,11 +56,21 @@ button {
   cursor: pointer;
 }
 
-a {
+.button-filters {
+  font-size: 0;
+}
+
+.main {
+  &--scroll {
+    padding-top: 115px;
+  }
+}
+
+/*a {
   &:visited {
     color: $blue-dark;
   }
-}
+}*/
 
 button,
 a,

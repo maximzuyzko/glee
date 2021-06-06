@@ -11,6 +11,8 @@ $grey800: #414141;
 $grey700: #585858;
 $grey600: #8b8b8b;
 $grey50: #f8f8f8;
+$grey100: #b3b3b3;
+$grey200: #f2f2f2;
 
 $white: #ffffff;
 
@@ -18,11 +20,13 @@ $black-title: #191919;
 $black-subtitle: #1a1a1a;
 $black-link: #262626;
 $black-title-another: #1f2044;
+$black-recent: #333333;
 
 //fonts
 $Poppins: 'Poppins', 'Tahoma', sans-serif;
 $DMSans: 'DMSans', 'Tahoma', sans-serif;
 $Rubik: 'Rubik', 'Tahoma', sans-serif;
+$fw300: 300;
 $fw400: 400;
 $fw500: 500;
 $fw700: 700;
@@ -31,10 +35,11 @@ $fw700: 700;
 $xl: 1200;
 $l: 1024;
 $ml: 996;
-$m: 800;
+$m: 820;
 $sm: 768;
 $s: 540;
 
+//function for fancybox
 @function max($numbers...) {
   @return m#{a}x(#{$numbers});
 };

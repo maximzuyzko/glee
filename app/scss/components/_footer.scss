@@ -95,7 +95,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include adp($s) {
+    @include adp($sm) {
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -120,6 +120,10 @@
         &:not(:last-child) {
           margin-right: 0;
           padding-right: 15px;
+
+          @include adp($sm) {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -170,7 +174,7 @@
   }
 
   &__copy {
-    @include adp($s) {
+    @include adp($sm) {
       margin-bottom: 15px;
     }
   }

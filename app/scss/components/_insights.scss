@@ -77,6 +77,10 @@
       }
 
       @include adp($m) {
+        margin-right: 10px;
+      }
+
+      @include adp($sm) {
         margin-right: 0;
       }
     }

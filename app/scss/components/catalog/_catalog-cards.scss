@@ -1,0 +1,288 @@
+.catalog-cards {
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__nav {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    svg {
+      width: 60px;
+      height: 30px;
+      fill: $blue300;
+      transition: fill 0.5s;
+
+      &:hover {
+        fill: $blue-dark;
+      }
+    }
+  }
+
+  &__display {
+    font-size: 0;
+  }
+
+  &__filters {
+    display: none;
+
+    @include adp($l){
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    svg {
+      width: 60px;
+      height: 30px;
+      fill: $blue300;
+      transition: fill 0.5s;
+
+      &:hover {
+        fill: $blue-dark;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 70px;
+
+    @include adp($l) {
+      margin-bottom: 20px;
+    }
+
+    @include adp($s) {
+      margin: 0 0 20px;
+    }
+
+
+  }
+
+  &--list {
+    .catalog-cards__list {
+      margin: 0;
+    }
+
+    .catalog-cards__item {
+      width: 100%;
+      max-width: 870px;
+      margin: 0 0 40px;
+
+      @include adp($sm) {
+        margin-bottom: 30px;
+      }
+
+      &:nth-child(n+5) {
+        display: none;
+      }
+    }
+
+    .product-card {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0;
+      box-shadow: none;
+      align-items: center;
+      text-align: left;
+
+      @include adp($sm) {
+        flex-direction: column;
+      }
+
+      &__wrap {
+        margin-right: 60px;
+        margin-bottom: 0;
+        width: 370px;
+        height: 500px;
+        border: 2px solid $grey200;
+
+        @include adp($m) {
+          width: 300px;
+          height: 375px;
+        }
+
+        @include adp($sm) {
+          margin: 0 auto;
+          width: 200px;
+          height: 250px;
+        }
+      }
+
+      &__img {
+        padding: 82px 24px;
+
+        @include adp($m) {
+          padding: 50px 24px;
+        }
+
+        @include adp($sm) {
+          padding: 20px 5px;
+        }
+      }
+
+      &__box {
+        max-width: 450px;
+
+        @include adp($m) {
+          max-width: 390px;
+        }
+      }
+
+      &__rating {
+        display: block;
+      }
+
+      &__descr {
+        display: block;
+
+      }
+
+      &__nav {
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+        position: static;
+
+        @include adp($sm) {
+          justify-content: center;
+        }
+      }
+
+      &__title {
+        margin-bottom: 20px;
+        font-family: $Rubik;
+        font-size: 40px;
+        font-weight: $fw400;
+        color: $black-recent;
+
+        @include adp($m) {
+          margin-bottom: 5px;
+          font-size: 26px;
+        }
+      }
+
+      &__price {
+        margin-bottom: 25px;
+        font-family: $Rubik;
+        font-size: 30px;
+        color: $black-recent;
+        font-weight: $fw400;
+
+        @include adp($m) {
+          margin-bottom: 5px;
+          font-size: 26px;
+        }
+      }
+
+      &__descr {
+        font-family: $Rubik;
+        color: $blue-dark;
+        margin-bottom: 30px;
+
+        @include adp($m) {
+          margin-bottom: 5px;
+        }
+      }
+
+      &__nav-item {
+        z-index: 1;
+
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+
+      &__btn {
+        border-radius: 0;
+        &--search {
+          display: none;
+        }
+      }
+    }
+
+    .jq-ry-container {
+      padding: 0;
+      margin-bottom: 37px;
+
+      @include adp($m) {
+        margin-bottom: 5px;
+      }
+    }
+
+    .jq-ry-container>.jq-ry-group-wrapper>.jq-ry-group {
+      z-index: 0;
+    }
+  }
+
+  &__item {
+    width: calc(100% / 3 - 30px);
+    margin: 0 15px 30px;
+
+    @include adp($sm) {
+      width: calc(100% / 2 - 30px);
+    }
+
+    @include adp($s) {
+      width: 100%;
+    }
+  }
+}
+
+.pagination {
+  margin-bottom: 105px;
+
+  @include adp($l) {
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    &--list {
+      justify-content: flex-start;
+
+      @include adp($l) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $blue300;
+
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &:hover {
+      .pagination__link {
+        color: $white;
+        background-color: $blue300;
+      }
+    }
+  }
+
+  &__link {
+    padding: 12px 21px;
+    color: $blue-dark;
+    font-family: $Rubik;
+    background-color: transparent;
+    transition: color 0.3s, background-color 0.3s;
+
+    &--active {
+      background-color: $blue300;
+      color: $white;
+    }
+  }
+}
