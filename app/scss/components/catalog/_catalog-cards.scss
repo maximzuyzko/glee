@@ -5,12 +5,27 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+
+    @include adp($s) {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
   }
 
   &__nav {
-    padding-left: 20px;
     display: flex;
     align-items: center;
+
+    @include adp($s) {
+      margin-bottom: 20px;
+    }
+
+    span {
+      margin-right: 20px;
+      font-family: $Rubik;
+      font-size: 18px;
+    }
+
     svg {
       width: 60px;
       height: 30px;
@@ -25,10 +40,24 @@
 
   &__display {
     font-size: 0;
+
+    span {
+      margin-right: 20px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   &__filters {
     display: none;
+
+    span {
+      margin-right: 20px;
+      font-family: $Rubik;
+      font-size: 18px;
+    }
 
     @include adp($l){
       padding-left: 20px;
@@ -151,6 +180,20 @@
 
         @include adp($sm) {
           justify-content: center;
+        }
+      }
+
+      &__btn {
+        transition: width 0.3s, height 0.3s;
+        &:hover {
+          width: 200px;
+          height: 45px;
+          .product-card__btn-text {
+            display: block;
+          }
+          svg {
+            display: none;
+          }
         }
       }
 

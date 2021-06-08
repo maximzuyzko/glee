@@ -83,6 +83,9 @@
   }
 
   &__descr {
+    p {
+      @include line-clamp(3);
+    }
     display: none;
   }
 
@@ -99,6 +102,14 @@
     @include adp($sm) {
       font-size: 20px;
     }
+  }
+
+  &__btn-text {
+    font-family: $Rubik;
+    font-size: 15px;
+    color: $white;
+    text-transform: uppercase;
+    display: none;
   }
 
   /*card-nav*/

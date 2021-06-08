@@ -1,6 +1,19 @@
 .catalog {
-  &__inner {
-    display: flex;
+  display: flex;
+
+  &__main {
+    max-width: 900px;
+  }
+
+  &__aside-wrap {
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+
+    @include adp($l) {
+      width: inherit;
+      margin-right: 0;
+    }
   }
 
   &__overlay {
@@ -16,6 +29,7 @@
     &__active {
       visibility: visible;
       opacity: 1;
+      z-index: 1;
     }
   }
 }

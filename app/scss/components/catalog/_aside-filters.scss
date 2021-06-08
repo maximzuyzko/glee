@@ -53,6 +53,12 @@
       background-color: $blue300;
     }
   }
+
+  &__form {
+    &--hidden {
+      display: none;
+    }
+  }
 }
 
 .aside-category,
@@ -73,6 +79,11 @@
 }
 
 .aside-category {
+  &__form {
+    &--hidden {
+      display: none;
+    }
+  }
   margin-bottom: 50px;
 
   @include adp($l) {

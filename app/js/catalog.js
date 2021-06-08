@@ -21,4 +21,11 @@ $(function () {
         $('.aside-filters').toggleClass('aside-filters__active');
         $('.body').toggleClass('body-stop-scroll');
     });
+
+    const asideTitle = document.querySelectorAll('.aside-filters__title');
+    asideTitle.forEach(item => {
+        item.addEventListener('click', () => {
+            item.nextElementSibling.classList.toggle('aside-filters__form--hidden');
+        })
+    })
 });
