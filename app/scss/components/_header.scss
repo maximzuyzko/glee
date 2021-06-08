@@ -1,24 +1,110 @@
 .header {
   flex: 1 0 auto;
 
+  &__menu {
+    @include adp($l){
+      height: 100vh;
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: rgba($blue500, 0.9);
+      transform: translateY(-200%);
+      transition: transform 0.3s;
+      &.menu--active {
+        transform: translateY(0%);
+      }
+    }
+  }
+
   &__inner {
     padding: 45px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: $white;
+
+    @include adp($l) {
+      padding: 15px 0;
+    }
+
+    @include adp($s) {
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    &--scroll {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      padding: 20px 15px;
+      border-bottom: 1px solid rgba($blue500, 0.4);
+
+      @include adp($ml) {
+        padding: 5px 15px;
+      }
+    }
+  }
+
+  &__button {
+    display: none;
+    background-color: transparent;
+    width: 40px;
+    z-index: 4;
+
+    span {
+      display: block;
+      width: 40px;
+      height: 5px;
+      background-color: $blue500;
+      transition: transform 0.5s, opacity 0.2s, background-color 0.3s;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &.header__button--active span {
+
+      &:nth-child(2) {
+        transform: translateY(15px) rotate(45deg);
+        background-color: $white;
+      }
+
+      &:nth-child(3) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: translateY(-15px) rotate(-45deg);
+        background-color: $white;
+      }
+    }
+
+
+    @include adp($l) {
+      display: block;
+    }
   }
 }
 
 .logo {
   display: block;
-  max-width: 146px;
-  max-height: 39px;
+  width: 146px;
+  height: 39px;
   transition: transform 0.5s ease;
 
   &__img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   &:hover {
@@ -32,6 +118,15 @@
   &__list {
     &:not(:last-child) {
       margin-right: 35px;
+
+      @include adp($l) {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+    }
+    @include adp($l) {
+      width: 100%;
+      text-align: center;
     }
   }
 
@@ -48,10 +143,54 @@
       color: $blue-dark;
     }
   }
+  &--active {
+    .menu__link {
+      display: block;
+      padding: 30px 0;
+      font-size: 36px;
+      color: $white;
+
+      @include adp($ml) {
+        padding: 10px 0;
+        font-size: 26px;
+      }
+    }
+  }
+
+
+}
+
+.menu--header {
+  @include adp($l){
+    height: 100vh;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba($blue500, 0.9);
+    transform: translateY(-200%);
+    transition: transform 0.3s;
+    &.menu--active {
+      transform: translateY(0%);
+    }
+  }
 }
 
 .user-nav {
   display: flex;
+
+  @include adp($s) {
+    width: 100%;
+    order: 1;
+    padding-top: 10px;
+    justify-content: center;
+  }
 
   &__btn {
     background-color: $blue300;
@@ -74,6 +213,10 @@
 
     &:not(:last-child){
       margin-right: 20px;
+
+      @include adp($s) {
+        margin-right: 5px;
+      }
     }
 
     &:hover {
@@ -93,6 +236,10 @@
     display: flex;
     justify-content: space-evenly;
     position: relative;
+
+    @include adp($s) {
+      margin-right: 5px;
+    }
 
     &::after {
       content: "";

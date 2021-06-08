@@ -12,6 +12,10 @@ body {
   color: $blue500;
   font-family: $DMSans;
   font-weight: $fw400;
+
+  &--scroll {
+    padding-top: 142px;
+  }
 }
 
 .container {
@@ -36,6 +40,19 @@ body {
   margin: -1px;
 }
 
+.title {
+  text-align: center;
+  font-weight: $fw700;
+  font-size: 36px;
+  color: $black-title;
+
+  @include line-clamp(1);
+
+  @include adp($s) {
+    font-size: 26px;
+  }
+}
+
 button {
   padding: 0;
   border: transparent;
@@ -43,15 +60,27 @@ button {
   cursor: pointer;
 }
 
+.button-filters {
+  font-size: 0;
+}
+
+/*.main {
+  &--scroll {
+    padding-top: 115px;
+  }
+}*/
+
+/*a {
+  &:visited {
+    color: $blue-dark;
+  }
+}*/
+
 button,
 a,
 textarea,
 input {
   outline: transparent;
-
-  /*&:visited {
-    color: $blue-dark;
-  }*/
 
   &:focus {
     border: 1px solid $blue500;
@@ -60,5 +89,19 @@ input {
   &:active {
     border: 1px solid $blue-dark;
   }
+}
+
+.btn-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+}
+
+.body-stop-scroll {
+  overflow: hidden;
 }
 

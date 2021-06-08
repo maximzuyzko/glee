@@ -1,0 +1,96 @@
+.insights {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-color: rgba($peach, 0.2);
+    height: 182px;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &__title {
+    @include adp($s) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 40px;
+
+    @include adp($s) {
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-weight: $fw700;
+    color: $black-link;
+    transition: color 0.5s;
+
+    @include line-clamp(1);
+
+    span {
+      margin-right: 18px;
+    }
+
+    svg {
+      width: 7px;
+      height: 12px;
+      fill: $black-link;
+      transition: fill 0.5s;
+    }
+
+    &:hover {
+      color: $blue300;
+      svg {
+        fill: $blue300;
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+
+    @include adp($xl) {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__list {
+    max-width: 370px;
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include adp($xl) {
+        margin-bottom: 15px;
+      }
+
+      @include adp($m) {
+        margin-right: 10px;
+      }
+
+      @include adp($sm) {
+        margin-right: 0;
+      }
+    }
+
+    @include adp($xl) {
+      width: calc(100% / 2 - 30px);
+    }
+
+    @include adp($m) {
+      width: 100%;
+    }
+  }
+}

@@ -1,8 +1,16 @@
 .footer {
   flex: 0 0 auto;
-  padding: 100px 0 40px;
+  padding: 55px 0 40px;
   font-size: 14px;
   color: $grey;
+
+  @include adp($sm) {
+    font-size: 16px;
+  }
+
+  @include adp($l) {
+    padding: 25px 0 20px;
+  }
 
   &__logo {
     margin-bottom: 30px;
@@ -14,28 +22,52 @@
     margin-bottom: 35px;
     padding-bottom: 75px;
     border-bottom: 1px solid rgba($blue300, 0.4);
+
+    @include adp($l) {
+      margin-bottom: 15px;
+      padding-bottom: 20px;
+    }
+
+    @include adp($sm) {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
   }
 
   &__item {
     padding-top: 20px;
     width: 100%;
     max-width: 270px;
+
+    @include adp($ml) {
+      width: auto;
+    }
+
+    @include adp($m) {
+      width: 100%;
+    }
   }
 
   &__title {
-    padding-top: 20px;
-    margin-bottom: 25px;
+    padding-top: 15px;
+    margin-bottom: 20px;
     font-weight: $fw700;
     font-size: 16px;
     text-transform: uppercase;
-    color: #1f2044;
+    color: $black-title-another;
 
     @include line-clamp(1);
+
+    @include adp($s) {
+      padding-top: 0;
+      font-size: 18px;
+    }
   }
 
   &__text {
     @include line-clamp(2);
 
+    font-family: $Rubik;
     margin-bottom: 35px;
   }
 
@@ -52,6 +84,10 @@
 
     @include line-clamp(1);
     @include hover-link;
+
+    @include adp($sm) {
+      font-size: 16px;
+    }
   }
 
   &__bottom {
@@ -59,11 +95,20 @@
     display: flex;
     justify-content: space-between;
 
+    @include adp($sm) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .menu {
       &__link {
         font-weight: $fw400;
         font-size: 14px;
         @include hover-link;
+
+        @include adp($sm) {
+          font-size: 18px;
+        }
       }
 
       &__list {
@@ -75,6 +120,10 @@
         &:not(:last-child) {
           margin-right: 0;
           padding-right: 15px;
+
+          @include adp($sm) {
+            margin-bottom: 0;
+          }
         }
       }
     }
@@ -84,17 +133,21 @@
     padding: 12px 15px;
     width: 100%;
     max-width: 170px;
-    border: none;
+    border: transparent;
     background-color: rgba($peach, 0.2);
 
     &::placeholder {
       font-size: 12px;
-      color: #234969;
+      color: $blue-placeholder;
+
+      @include adp($l) {
+        font-size: 14px;
+      }
     }
   }
   &__btn {
-    padding: 12px 16px;
-    border: none;
+    padding: 12px 15px;
+    border: transparent;
     color: $white;
     background-color: $blue300;
     transition: color 0.5s, background-color 0.5s;
@@ -105,15 +158,24 @@
     }
   }
 
-  .footer-address {
-    &__item {
-      a {
-        @include hover-link;
-      }
+  &__address {
+    a {
+      @include hover-link;
+    }
+  }
+  &__inner {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
 
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
+  &__form {
+    display: flex;
+  }
+
+  &__copy {
+    @include adp($sm) {
+      margin-bottom: 15px;
     }
   }
 }

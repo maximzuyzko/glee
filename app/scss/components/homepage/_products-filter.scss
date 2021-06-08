@@ -4,21 +4,39 @@
   justify-content: center;
   margin-bottom: 80px;
 
+  @include adp($l) {
+    margin-bottom: 30px;
+  }
+
+  @include adp($s) {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .mixitup-control-active {
-    color: #1a1a1a;
+    color: $black-subtitle;
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include adp($s) {
+        margin-bottom: 10px;
+        margin-right: 0;
+      }
     }
   }
 
   &__btn {
-    color: #8b8b8b;
+    color: $grey600;
     transition: color 0.5s ease;
     &:hover {
-      color: #1a1a1a;
+      color: $black-subtitle;
+    }
+
+    @include adp($l) {
+      font-size: 18px;
     }
   }
 }

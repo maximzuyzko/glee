@@ -1,0 +1,154 @@
+.insights-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.1);
+  background-color: $white;
+  position: relative;
+  height: 100%;
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 6px 47px 3px rgba(163, 187, 200, 0.35);
+    .insights-card__img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__wrap {
+    width: 370px;
+    height: 250px;
+    overflow: hidden;
+
+    @include adp($l) {
+      width: 300px;
+    }
+
+    @include adp($ml) {
+      height: 200px;
+      width: 100%;
+    }
+  }
+
+  &__img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  &__sublink {
+    position: absolute;
+    top: -15px;
+    left: 28px;
+    padding: 5px 31px;
+    z-index: 2;
+    border: 1px solid transparent;
+    background-color: $blue300;
+    border-radius: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    font-family: $Poppins;
+    font-weight: $fw700;
+    font-size: 14px;
+    transition: color 0.5s, background-color 0.5s, border-color 0.5s;
+
+    &:hover {
+      color: $blue300;
+      background-color: $white;
+      border-color: $blue300;
+    }
+  }
+
+  &__info {
+    padding: 35px 31px 27px;
+    display: flex;
+    flex-direction: column;
+    max-height: 181px;
+    height: 100%;
+    position: relative;
+
+    @include adp($l) {
+      padding: 35px 15px 15px;
+    }
+    @include adp($ml) {
+      height: auto;
+      padding: 25px 10px;
+    }
+  }
+
+  &__name {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: $fw500;
+    color: $black-link;
+
+    @include line-clamp(3);
+  }
+
+  &__bottom {
+    display: flex;
+    margin-top: auto;
+    padding-top: 10px;
+    font-size: 12px;
+    font-family: $Rubik;
+    color: $blue900;
+    line-height: 2.5;
+    text-transform: uppercase;
+    border-top: 1px solid #e0e0e0;
+
+    @include adp($ml) {
+      margin-top: 0;
+    }
+  }
+
+  &__descr {
+    padding-left: 15px;
+    position: relative;
+    transition: color 0.5s;
+    z-index: 2;
+
+    &:hover {
+      color: $blue300;
+    }
+
+    @include line-clamp(1);
+
+    &--time {
+      padding-right: 25px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 12px;
+      height: 13px;
+    }
+
+    &--time::before {
+      background-image: url("../images/icons/calendar.svg");
+    }
+
+    &--author::before {
+      background-image: url("../images/icons/user-circle.svg");
+    }
+  }
+}

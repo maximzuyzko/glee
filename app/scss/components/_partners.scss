@@ -1,0 +1,33 @@
+.partners {
+  background-color: rgba($peach, 0.2);
+  padding: 82px 0 92px;
+  z-index: 1;
+
+  @include adp($l) {
+    padding: 40px 0;
+  }
+
+  &__items {
+    display: flex;
+  }
+
+  &__list {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    width: 200px;
+  }
+
+  &__link {
+    display: block;
+    margin: auto;
+  }
+
+  &__img {
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+
+}

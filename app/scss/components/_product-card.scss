@@ -4,14 +4,24 @@
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.1);
   text-align: center;
+  transition: box-shadow 0.5s;
+
+  @include adp($l) {
+    padding: 20px 15px 30px;
+  }
+
+  @include adp($s) {
+    padding: 5px 0;
+  }
 
   &:hover {
     box-shadow: 0 6px 47px 3px rgba(163, 187, 200, 0.35);
 
     .product-card__nav {
       opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -21,7 +31,21 @@
     right: 0;
     bottom: 0;
     left: 0;
-    transition: box-shadow 0.5s;
+  }
+
+  &__wrap {
+    width: 250px;
+    height: 210px;
+    margin-bottom: 50px;
+
+    @include adp($xl) {
+      width: 210px;
+      margin: 0 auto 20px;
+    }
+
+    @include adp($sm) {
+      margin: 0 auto 10px;
+    }
   }
 
   &__img {
@@ -31,17 +55,38 @@
     object-fit: contain;
   }
 
-  &__wrap {
-    width: 250px;
-    height: 210px;
-    margin-bottom: 35px;
-  }
-
   &__title {
     @include line-clamp(1);
 
     font-weight: $fw500;
+    font-size: 16px;
     margin-bottom: 17px;
+
+    @include adp($l) {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    @include adp($sm) {
+      font-size: 24px;
+    }
+
+    @include adp($sm) {
+      margin-bottom: 5px;
+      font-size: 20px;
+      @include line-clamp(2);
+    }
+  }
+
+  &__rating {
+    display: none;
+  }
+
+  &__descr {
+    p {
+      @include line-clamp(3);
+    }
+    display: none;
   }
 
   &__price {
@@ -49,6 +94,22 @@
 
     font-weight: $fw700;
     color: $blue300;
+
+    @include adp($l) {
+      font-size: 16px;
+    }
+
+    @include adp($sm) {
+      font-size: 20px;
+    }
+  }
+
+  &__btn-text {
+    font-family: $Rubik;
+    font-size: 15px;
+    color: $white;
+    text-transform: uppercase;
+    display: none;
   }
 
   /*card-nav*/
@@ -56,11 +117,18 @@
   &__nav {
     display: flex;
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -60%);
+    transform: translate(-50%, -50%);
     opacity: 0;
+    visibility: hidden;
     transition: opacity 0.3s ease;
+
+    @include adp($ml) {
+      opacity: 1;
+      visibility: visible;
+      top: 65%;
+    }
   }
 
   &:hover {
@@ -78,12 +146,13 @@
     height: 45px;
     box-shadow: 0 3px 15px 1px rgba(163, 187, 200, 0.8);
     background-color: $white;
-    transition: fill 0.3s;
+    transition: box-shadow 0.5s, background-color 0.5s;
 
     svg {
       width: 20px;
       height: 20px;
       fill: $blue300;
+      transition: fill 0.5s;
     }
 
     &:hover {

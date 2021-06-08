@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+    @include('components/head.html')
+    <body class="body">
+        @include('components/header.html')
+        @include('components/breadcrumbs.html', { title: "Product list", span: "Product list" })
+        <div class="container">
+            <div class="catalog">
+                <div class="catalog__aside-wrap">
+                    @include('components/catalog/aside-filters.html')
+                </div>
+                <main class="main catalog__main">
+                    @include('components/catalog/catalog-cards.html')
+                </main>
+                <div class="catalog__overlay"></div>
+            </div>
+        </div>
+        @include('components/partners.html')
+        @include('components/footer.html')
+
+        <script src="js/main.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+        <script src="js/catalog.js"></script>
+    </body>
+</html>
