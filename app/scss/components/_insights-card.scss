@@ -29,7 +29,7 @@
     height: 250px;
     overflow: hidden;
 
-    @include adp($l) {
+    @include adp($ml) {
       width: 300px;
     }
 

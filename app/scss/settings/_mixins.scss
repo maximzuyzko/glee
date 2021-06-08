@@ -6,7 +6,7 @@
 }
 
 @mixin  hover-link {
-  transition: color 0.5s;
+  transition: color 0.5s, transform 0.5s;
 
   &:hover {
     color: $blue300;

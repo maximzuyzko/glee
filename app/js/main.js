@@ -86,14 +86,14 @@ $(function () {
 
     $(window).scroll(function () {
         var fixed = $('.header__inner');
-        var main = $('.body');
+        var body = $('.body');
         scroll = $(window).scrollTop();
         if (scroll >= 70 /*px*/) {
             fixed.addClass('header__inner--scroll')
-            main.addClass('body--scroll')
+            body.addClass('body--scroll')
         } else {
             fixed.removeClass('header__inner--scroll')
-            main.removeClass('body--scroll')
+            body.removeClass('body--scroll')
         }
     });
 
