@@ -12,6 +12,10 @@ body {
   color: $blue500;
   font-family: $DMSans;
   font-weight: $fw400;
+
+  &--scroll {
+    padding-top: 142px;
+  }
 }
 
 .container {
@@ -60,11 +64,11 @@ button {
   font-size: 0;
 }
 
-.main {
+/*.main {
   &--scroll {
     padding-top: 115px;
   }
-}
+}*/
 
 /*a {
   &:visited {
