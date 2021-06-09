@@ -72,17 +72,17 @@
     }
 
     span {
-      &:first-child{
-        font-size: 36px;
+      &:first-child,
+      &:last-child {
         font-weight: $fw700;
         color: $blue-dark;
-
+      }
+      &:first-child{
+        font-size: 36px;
       }
 
       &:last-child {
         font-size: 18px;
-        font-weight: $fw700;
-        color: $blue-dark;
       }
     }
   }
