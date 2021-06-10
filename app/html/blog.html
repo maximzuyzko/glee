@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+    @include('components/head.html')
+    <body class="body">
+        @include('components/header.html')
+        @include('components/breadcrumbs.html', { title: "Blog", span: "Blog" })
+        <div class="container">
+            <section class="blog-list">
+                <main class="main blog-list__main">
+                    @include('components/blog/blog-list.html')
+                </main>
+                <div class="blog-list__aside-wrap">
+                    @include('components/blog/aside-filters.html')
+                </div>
+                <div class="blog-list__overlay"></div>
+            </section>
+        </div>
+        @include('components/partners.html')
+        @include('components/footer.html')
+        <script src="js/main.min.js"></script>
+        <script src="js/blog.js"></script>
+    </body>
+</html>

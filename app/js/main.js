@@ -1,14 +1,5 @@
 $(function () {
 
-    $('.button-list').on('click', function (){
-        $('.catalog-cards').addClass('catalog-cards--list');
-        $('.pagination__list').addClass('pagination__list--list');
-    });
-
-    $('.button-grid').on('click', function (){
-        $('.catalog-cards').removeClass('catalog-cards--list');
-        $('.pagination__list').removeClass('pagination__list--list');
-    });
 
     $('.aside-recent__rating').rateYo({
         rating: 4,

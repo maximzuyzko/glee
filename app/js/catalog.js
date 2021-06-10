@@ -22,6 +22,16 @@ $(function () {
         $('.body').toggleClass('body-stop-scroll');
     });
 
+    $('.button-list').on('click', function (){
+        $('.catalog-cards').addClass('catalog-cards--list');
+        $('.pagination__list').addClass('pagination__list--list');
+    });
+
+    $('.button-grid').on('click', function (){
+        $('.catalog-cards').removeClass('catalog-cards--list');
+        $('.pagination__list').removeClass('pagination__list--list');
+    });
+
     const asideTitle = document.querySelectorAll('.aside-filters__title');
     asideTitle.forEach(item => {
         item.addEventListener('click', () => {
