@@ -12,10 +12,7 @@ body {
   color: $blue500;
   font-family: $DMSans;
   font-weight: $fw400;
-
-  /*&--scroll {
-    padding-top: 70px;
-  }*/
+  
 }
 
 .container {
@@ -100,6 +97,7 @@ input {
 .body-stop-scroll {
   overflow: hidden;
 }
+
 .body--scroll {
   padding-top: 142px;
 
