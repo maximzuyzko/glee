@@ -122,7 +122,6 @@
 
 .blog-card {
   position: relative;
-  height: 100%;
   background-color: $white;
   border-radius: 5px;
   box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
@@ -158,7 +157,7 @@
     }
 
     @include adp($s) {
-      width: 290px;
+      width: 280px;
       height: 180px;
     }
   }
@@ -297,5 +296,77 @@
       font-size: 20px;
       padding: 10px 15px;
     }
+  }
+
+  &__subtitle {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: $fw500;
+    color: $blue-dark;
+  }
+
+  &__blockquote {
+    margin: 37px 0 46px;
+    padding: 18px 50px 18px 35px;
+    border-left: 7px solid $blue300;
+    line-height: 1.8;
+    color: $blue-dark;
+    background-color: rgba($blue300, 0.2);
+  }
+
+  &__cite {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding-left: 45px;
+    font-style: normal;
+    color: $blue-dark;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 20px;
+      height: 4px;
+      background-color: $blue300;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__float {
+    margin-bottom: 45px;
+    display: flex;
+    align-items: center;
+
+    @include adp($sm) {
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__float-wrap {
+    margin-right: 30px;
+    width: 320px;
+    height: 210px;
+    position: relative;
+
+    @include adp($sm) {
+      margin: 0 auto;
+      width: 280px;
+      height: 180px;
+    }
+
+    .img {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+  }
+
+  &__float-info {
+    max-width: 470px;
   }
 }
