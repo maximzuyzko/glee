@@ -1,0 +1,372 @@
+.blog-list {
+  display: flex;
+
+  &__main {
+    max-width: 830px;
+    margin-right: 70px;
+
+    @include adp($xl) {
+      margin-right: auto;
+    }
+  }
+
+  &__aside-wrap {
+    width: 270px;
+
+    .aside-filters {
+      margin-right: auto;
+
+      @include adp($xl){
+        padding: 10px;
+        margin-right: 0;
+        height: 100vh;
+        z-index: 5;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $white;
+        transform: translateX(-200%);
+        transition: transform 0.3s;
+        overflow-y: scroll;
+
+        &.aside-filters__active {
+          transform: translateX(0%);
+        }
+      }
+    }
+
+    @include adp($xl) {
+      width: inherit;
+      margin-right: 0;
+    }
+  }
+
+  &__filters {
+    display: none;
+
+    span {
+      margin-right: 20px;
+      font-family: $Rubik;
+      font-size: 18px;
+    }
+
+    @include adp($xl){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    svg {
+      width: 60px;
+      height: 30px;
+      fill: $blue300;
+      transition: fill 0.5s;
+
+      &:hover {
+        fill: $blue-dark;
+      }
+    }
+  }
+
+  &__overlay {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($blue-dark, 0.9);
+
+    &--active {
+      visibility: visible;
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+
+  &__inner {
+    margin-bottom: 70px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 46px;
+    }
+  }
+
+  .pagination__list {
+    justify-content: flex-start;
+  }
+
+  .aside-category {
+    margin-bottom: 39px;
+  }
+
+  .aside-filters__title {
+    padding-left: 0;
+  }
+
+  .aside-category__checkbox {
+    padding: 10px 10px 10px 15px;
+  }
+
+  .aside-recent__box {
+    margin-right: 20px;
+  }
+
+}
+
+.blog-card {
+  position: relative;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 6px 47px 3px rgba(37, 37, 37, 0.05);
+  transition: box-shadow 0.5s;
+
+  &:hover {
+    box-shadow: 0 6px 47px 3px rgba(163, 187, 200, 0.35);
+    .blog-card__img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__wrap {
+    margin-bottom: 29px;
+    width: 830px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+
+    @include adp($ml) {
+      width: 500px;
+      height: 250px;
+      margin: 0 auto 29px;
+    }
+
+    @include adp($s) {
+      width: 280px;
+      height: 180px;
+    }
+  }
+
+  &__img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+  }
+
+  &__bottom {
+    padding: 23px 30px 23px 22px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $blue300;
+    color: $white;
+    text-transform: uppercase;
+    z-index: 1;
+
+    @include adp($sm) {
+      padding: 5px;
+    }
+  }
+
+  &__descr {
+    padding-left: 15px;
+    font-size: 12px;
+    position: relative;
+    transition: color 0.5s;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &:hover {
+      color: $blue-dark;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      width: 12px;
+      height: 13px;
+    }
+
+    &--time::before {
+      background-image: url("../images/icons/calendar-white.svg");
+    }
+
+    &--author::before {
+      background-image: url("../images/icons/user-circle-white.svg");
+    }
+  }
+
+
+  &__info {
+    padding: 5px;
+    font-family: $Rubik;
+    max-width: 830px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-size: 36px;
+    font-weight: $fw400;
+    color: $black-recent;
+    line-height: 1.2;
+    @include line-clamp(1);
+
+    @include adp($m) {
+      @include line-clamp(2);
+    }
+
+    @include adp($s) {
+      font-size: 26px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    color: $blue-dark;
+    p {
+      line-height: 1.9;
+      @include line-clamp(3);
+
+      @include adp($m) {
+        @include line-clamp(6);
+      }
+
+      @include adp($s) {
+        @include line-clamp(10);
+      }
+    }
+  }
+
+  &__sublink {
+    display: inline-block;
+    padding: 18px 16px;
+    color: $blue300;
+    font-size: 15px;
+    background-color: $white;
+    transition: background-color 0.5s, color 0.5s;
+    border: 1px solid $blue300;
+    z-index: 2;
+    position: relative;
+
+    span {
+      margin-right: 45px;
+    }
+
+    svg {
+      width: 22px;
+      height: 9px;
+      fill: $blue300;
+      transition: fill 0.5s;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $blue300;
+      svg {
+        fill: $white;
+      }
+    }
+
+    @include adp($m) {
+      font-size: 20px;
+      padding: 10px 15px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: $fw500;
+    color: $blue-dark;
+  }
+
+  &__blockquote {
+    margin: 37px 0 46px;
+    padding: 18px 50px 18px 35px;
+    border-left: 7px solid $blue300;
+    line-height: 1.8;
+    color: $blue-dark;
+    background-color: rgba($blue300, 0.2);
+  }
+
+  &__cite {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    padding-left: 45px;
+    font-style: normal;
+    color: $blue-dark;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 20px;
+      height: 4px;
+      background-color: $blue300;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__float {
+    margin-bottom: 45px;
+    display: flex;
+    align-items: center;
+
+    @include adp($sm) {
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__float-wrap {
+    margin-right: 30px;
+    width: 320px;
+    height: 210px;
+    position: relative;
+
+    @include adp($sm) {
+      margin: 0 auto;
+      width: 280px;
+      height: 180px;
+    }
+
+    .img {
+      margin: auto;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+  }
+
+  &__float-info {
+    max-width: 470px;
+  }
+}

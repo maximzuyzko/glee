@@ -12,10 +12,7 @@ body {
   color: $blue500;
   font-family: $DMSans;
   font-weight: $fw400;
-
-  &--scroll {
-    padding-top: 142px;
-  }
+  
 }
 
 .container {
@@ -62,13 +59,9 @@ button {
 
 .button-filters {
   font-size: 0;
+  border: 1px solid transparent;
 }
 
-/*.main {
-  &--scroll {
-    padding-top: 115px;
-  }
-}*/
 
 /*a {
   &:visited {
@@ -103,5 +96,17 @@ input {
 
 .body-stop-scroll {
   overflow: hidden;
+}
+
+.body--scroll {
+  padding-top: 142px;
+
+  @include adp($l) {
+    padding-top: 92px;
+  }
+
+  @include adp($ml) {
+    padding-top: 82px;
+  }
 }
 

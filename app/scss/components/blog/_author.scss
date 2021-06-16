@@ -1,0 +1,122 @@
+.author {
+  margin-bottom: 60px;
+  padding: 25px 25px 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $Rubik;
+  border-top: 2px solid #ebebeb;
+  border-bottom: 2px solid #ebebeb;
+
+  @include adp($sm) {
+    margin-bottom: 15px;
+  }
+
+  @include adp($s) {
+    flex-wrap: wrap;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+
+    @include adp($s) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__wrap {
+    margin-right: 30px;
+    width: 76px;
+    height: 76px;
+    position: relative;
+  }
+
+  &__wrap-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__img {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-size: 18px;
+    font-weight: $fw500;
+    color: $black-recent;
+  }
+
+  &__position {
+    color: $grey-position;
+  }
+
+  &__social,
+  &__tags {
+    display: flex;
+
+    span {
+      color: $black-recent;
+      margin-right: 20px;
+    }
+  }
+
+  &__social {
+    .author__item{
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  &__tags {
+    .author__item{
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    color: $grey-date;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $black-recent;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      fill: $grey100;
+      transition: fill 0.3s;
+
+      &:hover {
+        fill: $black-recent;
+      }
+    }
+  }
+
+
+}

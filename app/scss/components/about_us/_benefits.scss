@@ -1,0 +1,89 @@
+.benefits {
+  padding: 84px 0;
+  margin-bottom: 115px;
+  background-color: $peach;
+
+  @include adp($l) {
+    margin-bottom: 50px;
+  }
+
+  @include adp($m) {
+    padding: 40px 0;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    @include adp($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include adp($sm) {
+      width: calc(100% / 2);
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 28%;
+      background-repeat: no-repeat;
+
+      @include adp($sm) {
+        left: 40%;
+      }
+      @include adp($s) {
+        left: 30%;
+      }
+    }
+
+    &--rate::before {
+      background-image: url("../images/about_us/benefits/1.svg");
+      width: 74px;
+      height: 60px;
+    }
+
+    &--deliver::before {
+      background-image: url("../images/about_us/benefits/2.svg");
+      width: 73px;
+      height: 52px;
+    }
+
+    &--time::before {
+      background-image: url("../images/about_us/benefits/3.svg");
+      width: 79px;
+      height: 64px;
+    }
+
+    &--brands::before {
+      background-image: url("../images/about_us/benefits/4.svg");
+      width: 61px;
+      height: 64px;
+    }
+
+    span {
+      &:first-child,
+      &:last-child {
+        font-weight: $fw700;
+        color: $blue-dark;
+      }
+      &:first-child{
+        font-size: 36px;
+      }
+
+      &:last-child {
+        font-size: 18px;
+      }
+    }
+  }
+}

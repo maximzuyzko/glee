@@ -1,0 +1,242 @@
+.comments {
+  margin-bottom: 90px;
+  font-family: $Rubik;
+
+  @include adp($sm) {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    font-weight: $fw700;
+    font-size: 24px;
+    color: $blue500;
+  }
+
+  &__item {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+
+      @include adp($ml) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &--reply {
+      margin-left: 130px;
+      padding-top: 28px;
+      padding-bottom: 30px;
+      border-top: 1px solid $grey100;
+      border-bottom: 1px solid $grey100;
+
+      @include adp($ml) {
+        margin-left: 115px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+
+      @include adp($sm) {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  &__avatar-wrap {
+    display: block;
+    margin-right: 30px;
+    width: 100%;
+    max-width: 100px;
+    max-height: 100px;
+
+
+    @include adp($ml) {
+      margin-bottom: 15px;
+    }
+
+    @include adp($sm) {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  }
+
+  &__info {
+    width: 100%;
+  }
+
+  &__avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include adp($sm) {
+      border-radius: 50%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+
+    @include adp($ml) {
+      margin-bottom: 15px;
+    }
+
+    @include adp($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__author {
+    max-width: 250px;
+    font-weight: $fw700;
+    color: $blue500;
+    @include line-clamp(1);
+
+    @include adp($ml) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__date {
+    font-size: 14px;
+    color: $grey100;
+  }
+
+  &__text {
+    margin-bottom: 19px;
+    line-height: 1.9;
+    color: $blue600;
+
+    @include adp($ml) {
+      margin-bottom: 15px;
+    }
+
+    @include adp($sm) {
+      line-height: 1.2;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    span {
+      margin-right: 10px;
+      font-size: 14px;
+      color: $blue600;
+      transition: color 0.3s;
+    }
+
+    svg {
+      width: 14px;
+      height: 14px;
+      fill: $blue600;
+      transform: translateX(0);
+      transition: fill 0.3s, transform 0.3s;
+    }
+
+    &:hover {
+      span {
+        color: $black-recent;
+      }
+      svg {
+        fill: $black-recent;
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.form-comment {
+  margin-bottom: 120px;
+  font-family: $Rubik;
+
+  @include adp($sm) {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    font-weight: $fw700;
+    font-size: 24px;
+    color: $blue500;
+
+    @include adp($sm) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__form {
+    margin-bottom: 0;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include adp($sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+
+    svg {
+      position: absolute;
+      right: 18px;
+      top: 18px;
+      fill: $blue500;
+    }
+
+    &--name {
+      margin-right: 30px;
+
+      @include adp($sm) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 8px 40px 8px 18px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba($black, 0.1);
+    color: $grey600;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      color: $grey100;
+    }
+
+    &--textarea {
+      margin-bottom: 40px;
+      padding-top: 12px;
+      min-height: 120px;
+      resize: none;
+    }
+  }
+
+  &__button {
+    padding: 15px 33px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $blue300;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($blue300, 30%);
+    }
+  }
+}
