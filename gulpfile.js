@@ -38,7 +38,7 @@ const htmlInclude = () => {
             prefix: '@',
             basepath: '@file',
         }))
-        .pipe(dest('app'))
+        .pipe(dest('docs'))
         .pipe(browserSync.stream());
 }
 
